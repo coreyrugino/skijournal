@@ -2,6 +2,7 @@ class Entry extends React.Component{
   constructor(props){
     super(props);
     this.deleteItem = this.deleteItem.bind(this);
+    // this.props.refreshList = this.refreshList.bind(this);
   }
 
   deleteItem(entry_id) {
@@ -10,15 +11,16 @@ class Entry extends React.Component{
     let self = this;
     $.ajax({
       type: 'DELETE',
-      url: '/entries/' + this.props.id,
-      data: {entry_id: this.props.id},
+      url: this.props.url
+      // data: {entry_id: this.props.id},
     }).success( data => {
-      debugger
+      // debugger
       self.props.refreshList();
     });
   }
 
   render(){
+    // debugger
     return(
       <div>
         <div className='col s4'>
@@ -28,7 +30,7 @@ class Entry extends React.Component{
               <h3>{this.props.date}</h3>
               <p className='flow-text'>{this.props.story}</p>
               <p>{this.props.partners}</p>
-              <a href='#' className='black' onClick={this.deleteItem} >X</a>
+              <a href='#' className='black' onClick={()=>this.deleteItem()} >X</a>
             </div>
           </div>
         </div>

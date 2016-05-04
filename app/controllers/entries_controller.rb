@@ -9,9 +9,8 @@ class EntriesController < ApplicationController
   end
 
   def destroy
-    binding.pry
-    @entry = Entry.find(params[:id])
-    @entry.destroy
+    # binding.pry
+    @entry = Entry.find(params[:id]).destroy
     head :ok
     # render json: Entry.all
   end

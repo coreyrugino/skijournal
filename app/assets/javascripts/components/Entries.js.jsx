@@ -9,11 +9,14 @@ class Entries extends React.Component{
     this.addEntryPartners = this.addEntryPartners.bind(this);
     this.submitEntry = this.submitEntry.bind(this);
     // this.deleteItem = this.deleteItem.bind(this);
+    this.refreshList = this.refreshList.bind(this);
   }
 
   componentDidMount() {
     this.refreshList();
   }
+
+
 
   refreshList() {
     let self = this;
@@ -70,7 +73,6 @@ class Entries extends React.Component{
     // var story = this.state.entryStory;
     // var partners = this.state.entryPartners;
     let self = this;
-
     $.ajax({
       url: '/entries',
       type: 'POST',
@@ -78,7 +80,7 @@ class Entries extends React.Component{
       dataType: "json",
       success: function(data) {
         var entries = self.state.entries;
-        entries.push({ id: data.id, date: data.date, title: data.title, story: data.story, partners: data.partners, complete: data.complete});
+        entries.push({ id: data.id, url: data.url, date: data.date, title: data.title, story: data.story, partners: data.partners, complete: data.complete});
         self.setState({ entries: entries, showAdd: false, entryDate: null, entryTitle: null, entryStory: null, entryPartners: null});
       },
       error: function(data) {
@@ -90,7 +92,7 @@ class Entries extends React.Component{
   render(){
     let entries = this.state.entries.map( entry => {
       let key = `entry-${entry.id}`;
-      return(<Entry key ={key} {...entry}/>)
+      return(<Entry key ={key} url={entry.url} refreshList={this.refreshList} {...entry}/>)
     })
     return(
       <div>
