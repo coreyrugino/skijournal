@@ -13,4 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+h1 {
+  color: blue;
+}
+
+#journalCards {
+  border-radius: 15px 50px;
+  border: 2px solid blue;
+}
 @import "materialize"
