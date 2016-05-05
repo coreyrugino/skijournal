@@ -5,6 +5,7 @@ class EntriesController < ApplicationController
   end
 
   def create
+    binding.pry
     @entry = Entry.create(entry_params)
   end
 

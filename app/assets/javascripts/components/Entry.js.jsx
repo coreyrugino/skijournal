@@ -24,11 +24,11 @@ class Entry extends React.Component{
     return(
       <div>
         <div className='col s4'>
-          <div className='z-depth-5 card green' id='journalCards'>
+          <div className='z-depth-5 card hoverable green' id='journalCards'>
             <div className='card-content white-text'>
               <span className='card-title'>{this.props.title}</span>
               <h3>{this.props.date}</h3>
-              <p className='flow-text'>{this.props.story}</p>
+              <p className='flow-text truncate'>{this.props.story}</p>
               <p>{this.props.partners}</p>
               <a href='#' className='black' onClick={()=>this.deleteItem()} >X</a>
             </div>
