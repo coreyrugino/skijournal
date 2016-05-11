@@ -5,15 +5,12 @@ class EntriesController < ApplicationController
   end
 
   def create
-    binding.pry
     @entry = Entry.create(entry_params)
   end
 
   def destroy
-    # binding.pry
     @entry = Entry.find(params[:id]).destroy
     head :ok
-    # render json: Entry.all
   end
 
   private

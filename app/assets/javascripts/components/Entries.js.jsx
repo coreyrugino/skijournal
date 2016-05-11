@@ -8,7 +8,6 @@ class Entries extends React.Component{
     this.addEntryStory = this.addEntryStory.bind(this);
     this.addEntryPartners = this.addEntryPartners.bind(this);
     this.submitEntry = this.submitEntry.bind(this);
-    // this.deleteItem = this.deleteItem.bind(this);
     this.refreshList = this.refreshList.bind(this);
   }
 
@@ -96,10 +95,12 @@ class Entries extends React.Component{
     })
     return(
       <div>
-        <a className='btn' onClick={this.showEntryForm}>Add Journal Entry</a>
-            {this.addEntryForm()}
         <h1 className='center'>Ski days</h1>
         <hr />
+        <div className='center-align col s6 m4'>
+          <a className='offset-s3 btn black-text' onClick={this.showEntryForm}>Add Journal Entry</a>
+        </div>
+        {this.addEntryForm()}
         <div className='row'>
           {entries}
         </div>
