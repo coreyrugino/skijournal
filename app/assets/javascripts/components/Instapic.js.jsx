@@ -7,13 +7,10 @@ class Instapic extends React.Component{
   render(){
     return(
       <div>
-        <div className='z-depth-5 card hoverable blue' onClick={()=>this.showInfo()} id='journalCards'>
+        <div className='z-depth-5 card hoverable blue center-align' onClick={()=>this.showInfo()} id='journalCards'>
           <div className='card-content white-text'>
-            <span className='card-title'>{this.props.title}</span>
-            <h3>{this.props.date}</h3>
-            <p className='flow-text truncate'>{this.props.story}</p>
+            <img src={this.props.images.low_resolution.url}></img>
             <p>{this.props.caption.text}</p>
-            <a href='#' className='black' onClick={()=>this.deleteItem()} >X</a>
           </div>
         </div>
       </div>);

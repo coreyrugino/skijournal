@@ -248,3 +248,5 @@ end
 https://api.instagram.com/v1/users/self/media/recent/?access_token=13409763.a17fd3f.f05f1dbe234746b68df24c3664b9aef1
 
 http://api.dar.fm/playlist.php?q=@artist%black&partner_token=9388418650
+// <h4 className='center-align'>{this.props.location.name}</h4>
+// <p className='flow-text truncate'>{this.props.caption.story}</p>

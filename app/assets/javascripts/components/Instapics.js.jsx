@@ -25,7 +25,7 @@ class Instapics extends React.Component{
       // jsonp: 'callback',
       // cache: false,
     }).success( data => {
-      debugger
+      // debugger
       console.log(data);
       this.setState({results: data.data});
       // for(x in data.data){
