@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'instagram/index'
+
 get 'static_pages/home'
 get 'dashboard/index'
 root 'static_pages#home'

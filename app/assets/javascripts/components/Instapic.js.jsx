@@ -1,35 +1,7 @@
-class Entry extends React.Component{
+class Instapic extends React.Component{
   constructor(props){
     super(props);
-    // this.state = {clicked: false}
-    this.deleteItem = this.deleteItem.bind(this);
-  }
 
-  deleteItem(entry_id) {
-    let self = this;
-    $.ajax({
-      type: 'DELETE',
-      url: this.props.url
-    }).success( data => {
-      self.props.refreshList();
-    });
-  }
-
-  showInfo(entry_id) {
-    alert("meow")
-    return(
-      <div>
-        <Modal
-          // isOpen={true}
-          // onAfterOpen={afterOpenFn}
-          // onRequestClose={requestOpenFn}
-          // closeTimeoutMS={n}
-          // style={customStyle}
-        >
-          <h1>Modal Content</h1>
-          <p>Etc.</p>
-        </Modal>
-      </div>)
   }
 
   render(){

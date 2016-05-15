@@ -1,0 +1,8 @@
+%h1 Cats_on_peaks' Instagram
+- @instagram.each do |instagram|
+  = instagram.location.name
+  %br
+  = image_tag instagram.images.standard_resolution.url
+  %br
+  = instagram.caption.text
+  %hr

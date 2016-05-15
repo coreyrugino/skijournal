@@ -97,10 +97,11 @@ class Entries extends React.Component{
       <div>
         <h1 className='center'>Ski days</h1>
         <hr />
-        <div className='center-align col s6 m4'>
-          <a className='offset-s3 btn black-text' onClick={this.showEntryForm}>Add Journal Entry</a>
+        <div className='center-align'>
+          <a className='btn black-text' onClick={this.showEntryForm}>Add Journal Entry</a>
         </div>
         {this.addEntryForm()}
+        <br />
         <div className='row'>
           {entries}
         </div>
