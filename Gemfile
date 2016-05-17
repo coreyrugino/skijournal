@@ -26,6 +26,8 @@ end
 gem 'materialize-sass'
 gem 'haml-rails'
 gem 'instagram'
+gem 'carrierwave', '~> 0.10.0'
+gem 'mini_magick', '~> 4.3'
 gem 'react-rails'
 
 

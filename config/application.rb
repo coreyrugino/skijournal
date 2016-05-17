@@ -31,5 +31,13 @@ module Journal
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    require 'yaml'
+    rails_root = Rails.root || File.dirname(__FILE__) + '/../..'
+    config = YAML.load_file(rails_root.to_s + '/config/env_vars.yml')
+    if config.key?(Rails.env) && config[Rails.env].is_a?(Hash)
+      config[Rails.env].each do |key, value|
+        ENV[key] = value.to_s
+      end
+    end
   end
 end
