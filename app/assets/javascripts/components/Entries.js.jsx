@@ -15,8 +15,6 @@ class Entries extends React.Component{
     this.refreshList();
   }
 
-
-
   refreshList() {
     let self = this;
     $.ajax({
@@ -67,10 +65,6 @@ class Entries extends React.Component{
 
   submitEntry(e) {
     e.preventDefault();
-    // let date = this.state.entryDate;
-    // var title = this.state.entryTitle;
-    // var story = this.state.entryStory;
-    // var partners = this.state.entryPartners;
     let self = this;
     $.ajax({
       url: '/entries',
