@@ -1,5 +1,6 @@
-require "instagram"
-   Instagram.configure do |config|
-   config.client_id = 'a17fd3f59f49470f87d64b71613bd2f9'
-   config.access_token = '13409763.a17fd3f.f05f1dbe234746b68df24c3664b9aef1'
+insta = "#{Rails.root}/config/insta.yml"
+if File.exists? insta
+  config = File.read(insta).split("\n")
+  # binding.pry
+  config.each {|key, value| ENV[key] || ENV[key] = value.to_s}
 end

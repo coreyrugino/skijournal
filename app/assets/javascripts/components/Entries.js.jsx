@@ -39,6 +39,7 @@ class Entries extends React.Component{
               <input placeholder='title' type='text' onChange={this.addEntryTitle}/>
               <input placeholder='story' type='text' onChange={this.addEntryStory}/>
               <input placeholder='partners' type='text' onChange={this.addEntryPartners}/>
+              <input className='upload' type='file' onChange={this.addEntryPics}/>
               <button className='btn' type='submit'>Save</button>
             </div>
           </form>
@@ -63,13 +64,17 @@ class Entries extends React.Component{
     this.setState({entryPartners: e.currentTarget.value});
   }
 
+  addEntryPics(e) {
+    this.setState({entryPics: e.currentTarget.value});
+  }
+
   submitEntry(e) {
     e.preventDefault();
     let self = this;
     $.ajax({
       url: '/entries',
       type: 'POST',
-      data: {entry: {date: this.state.entryDate, title: this.state.entryTitle, story: this.state.entryStory, partners: this.state.entryPartners}},
+      data: {entry: {date: this.state.entryDate, title: this.state.entryTitle, story: this.state.entryStory, partners: this.state.entryPartners, image: this.state.entryPics}},
       dataType: "json",
       success: function(data) {
         var entries = self.state.entries;
