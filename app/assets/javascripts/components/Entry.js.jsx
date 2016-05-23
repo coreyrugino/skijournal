@@ -42,6 +42,9 @@ class Entry extends React.Component{
                 <h3>{this.props.date}</h3>
                 <p className='flow-text truncate'>{this.props.story}</p>
                 <p>{this.props.partners}</p>
+                <div>
+                
+                </div>
                 <a className="waves-effect waves-light btn " href="#modal2">All</a>
                 <a href='#' className='black' onClick={()=>this.deleteItem()} >X</a>
               </div>

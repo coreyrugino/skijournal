@@ -9,6 +9,7 @@ class Entries extends React.Component{
     this.addEntryPartners = this.addEntryPartners.bind(this);
     this.submitEntry = this.submitEntry.bind(this);
     this.refreshList = this.refreshList.bind(this);
+    this.addEntryPics = this.addEntryPics.bind(this)
   }
 
   componentDidMount() {
@@ -39,7 +40,7 @@ class Entries extends React.Component{
               <input placeholder='title' type='text' onChange={this.addEntryTitle}/>
               <input placeholder='story' type='text' onChange={this.addEntryStory}/>
               <input placeholder='partners' type='text' onChange={this.addEntryPartners}/>
-              <input className='upload' type='file' onChange={this.addEntryPics}/>
+              <input className='upload' multiple='true' type='file' onChange={this.addEntryPics}/>
               <button className='btn' type='submit'>Save</button>
             </div>
           </form>
@@ -74,7 +75,7 @@ class Entries extends React.Component{
     $.ajax({
       url: '/entries',
       type: 'POST',
-      data: {entry: {date: this.state.entryDate, title: this.state.entryTitle, story: this.state.entryStory, partners: this.state.entryPartners, image: this.state.entryPics}},
+      data: {entry: {date: this.state.entryDate, title: this.state.entryTitle, story: this.state.entryStory, partners: this.state.entryPartners, images: this.state.entryPics}},
       dataType: "json",
       success: function(data) {
         var entries = self.state.entries;
