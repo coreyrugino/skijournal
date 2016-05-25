@@ -1,3 +1,3 @@
 class Entry < ActiveRecord::Base
-  mount_uploader :image, ImageUploader
+  has_many :entry_images
 end

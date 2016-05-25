@@ -26,7 +26,7 @@ end
 gem 'materialize-sass'
 gem 'haml-rails'
 gem 'instagram'
-gem 'carrierwave', '~> 0.10.0'
+gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
 gem 'mini_magick', '~> 4.3'
 gem 'magnific-popup-rails', '~> 1.1.0'
 gem 'react-rails'

@@ -333,3 +333,16 @@ var ModalLink = React.createClass({
 });
 
 React.renderComponent(<ModalLink />, document.body);
+
+A modal that works, in the same div as the entry.jsx render, and put modal-trigger back in
+<div>
+  <div id="modal2" className="modal">
+    <div className="modal-content">
+      <h4>{this.props.title}</h4>
+      <p>{this.props.story}</p>
+    </div>
+    <div className="modal-footer">
+      <a href="#!" className=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+</div>

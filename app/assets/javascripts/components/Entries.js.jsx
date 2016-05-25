@@ -66,6 +66,7 @@ class Entries extends React.Component{
   }
 
   addEntryPics(e) {
+    debugger
     this.setState({entryPics: e.currentTarget.value});
   }
 
@@ -79,8 +80,8 @@ class Entries extends React.Component{
       dataType: "json",
       success: function(data) {
         var entries = self.state.entries;
-        entries.push({ id: data.id, url: data.url, date: data.date, title: data.title, story: data.story, partners: data.partners, complete: data.complete});
-        self.setState({ entries: entries, showAdd: false, entryDate: null, entryTitle: null, entryStory: null, entryPartners: null});
+        entries.push({ id: data.id, url: data.url, date: data.date, title: data.title, story: data.story, partners: data.partners, images: data.images, complete: data.complete});
+        self.setState({ entries: entries, showAdd: false, entryDate: null, entryTitle: null, entryStory: null, entryPartners: null, entryPics: null});
       },
       error: function(data) {
         alert('cats meow')
