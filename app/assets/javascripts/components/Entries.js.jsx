@@ -36,11 +36,11 @@ class Entries extends React.Component{
         <div>
           <form onSubmit={this.submitEntry}>
             <div className='input-field'>
-              <input autoFocus='true' placeholder='date' type='datetime' onChange={this.addEntryDate}/>
+              <input autoFocus='true' placeholder='date' type='date' onChange={this.addEntryDate}/>
               <input placeholder='title' type='text' onChange={this.addEntryTitle}/>
               <input placeholder='story' type='text' onChange={this.addEntryStory}/>
               <input placeholder='partners' type='text' onChange={this.addEntryPartners}/>
-              <input className='upload' multiple='true' type='file' onChange={this.addEntryPics}/>
+              
               <button className='btn' type='submit'>Save</button>
             </div>
           </form>

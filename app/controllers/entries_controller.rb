@@ -1,7 +1,7 @@
 class EntriesController < ApplicationController
 
   def index
-    @entries = Entry.all
+    @entries = Entry.all.order(:date).reverse_order
   end
 
   def create
@@ -16,7 +16,7 @@ class EntriesController < ApplicationController
   private
 
     def entry_params
-      params.require(:entry).permit(:date, :title, :story, :partners, images: [])
+      params.require(:entry).permit(:date, :title, :story, :partners)
     end
 
 end

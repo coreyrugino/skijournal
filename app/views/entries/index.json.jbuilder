@@ -4,6 +4,6 @@ json.entries @entries do |entry|
   # json.title entry.title
   # json.story entry.story
   # json.partners entry.partners
-  json.(entry, :id, :date, :title, :story, :partners, :image)
+  json.(entry, :id, :date, :title, :story, :partners)
   json.url entry_url(entry)
 end
