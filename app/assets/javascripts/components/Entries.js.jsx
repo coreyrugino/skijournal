@@ -39,7 +39,7 @@ class Entries extends React.Component{
               <input placeholder='title' type='text' onChange={this.addEntryTitle}/>
               <input placeholder='story' type='text' onChange={this.addEntryStory}/>
               <input placeholder='partners' type='text' onChange={this.addEntryPartners}/>
-              <input className='upload' type='file' onChange={this.addEntryPics}/>
+              
               <button className='btn' type='submit'>Save</button>
             </div>
           </form>

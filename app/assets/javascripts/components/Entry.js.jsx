@@ -36,7 +36,7 @@ class Entry extends React.Component{
       <div>
         <div>
           <div className='col s12 m4'>
-            <div className='z-depth-5 card hoverable green modal-trigger' onClick={()=>{this.showInfo()}} href="#modal2" id='journalCards'>
+            <div className='z-depth-5 card hoverable green' onClick={()=>{this.showInfo()}} href="#modal2" id='journalCards'>
               <div className='card-content white-text'>
                 <span className='card-title'>{this.props.title}</span>
                 <h3>{this.props.date}</h3>
