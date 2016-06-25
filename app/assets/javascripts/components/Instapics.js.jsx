@@ -20,9 +20,6 @@ class Instapics extends React.Component{
     }).success( data => {
       console.log(data);
       this.setState({results: data.data});
-      // for(x in data.data){
-      //   $('ul').append('<li><img src="'+data.data[x].images.low_resolution.url+'"><p>'+data.data[x].caption.text+'</p></li><hr />');
-      // }
     });
   }
 

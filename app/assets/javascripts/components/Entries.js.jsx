@@ -40,8 +40,9 @@ class Entries extends React.Component{
               <input placeholder='title' type='text' onChange={this.addEntryTitle}/>
               <input placeholder='story' type='text' onChange={this.addEntryStory}/>
               <input placeholder='partners' type='text' onChange={this.addEntryPartners}/>
-              
+
               <button className='btn' type='submit'>Save</button>
+              <hr />
             </div>
           </form>
         </div>
@@ -84,7 +85,7 @@ class Entries extends React.Component{
         self.setState({ entries: entries, showAdd: false, entryDate: null, entryTitle: null, entryStory: null, entryPartners: null, entryPics: null});
       },
       error: function(data) {
-        alert('cats meow')
+        alert('cats meow, did not update!')
       },
     });
   }

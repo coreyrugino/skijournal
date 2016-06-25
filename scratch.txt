@@ -12,3 +12,8 @@ http://api.dar.fm/playlist.php?q=@artist%black&partner_token=9388418650
 
 this is to upload pics hopefully
 <input className='upload' type='file' onChange={this.addEntryPics}/>
+
+jquery for instagram component to show pics.
+// for(x in data.data){
+//   $('ul').append('<li><img src="'+data.data[x].images.low_resolution.url+'"><p>'+data.data[x].caption.text+'</p></li><hr />');
+// }
