@@ -17,4 +17,5 @@
 //= require react_ujs
 //= require components
 //= require magnific-popup
+//= require js-routes
 //= require_tree .

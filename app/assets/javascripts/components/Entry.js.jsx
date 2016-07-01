@@ -31,7 +31,7 @@ class Entry extends React.Component{
   }
 
   showInfo(entry_id) {
-    // debugger
+    debugger
     name = this.props.title
     alert('title: '+name)
   }
@@ -41,13 +41,13 @@ class Entry extends React.Component{
       <div>
         <div>
           <div className='col s12 m4'>
-            <div className='z-depth-5 card hoverable green' onClick={()=>{this.showInfo()}} href="#" id='journalCards'>
+            <div className='z-depth-5 card hoverable green' onClick={()=>Routes.entry_path(this.props.id)} id='journalCards'>
               <div className='card-content white-text'>
                 <span className='card-title'>{this.props.title}</span>
                 <h3>{this.props.date}</h3>
                 <p className='flow-text truncate'>{this.props.story}</p>
                 <p>{this.props.partners}</p>
-                <a className="waves-effect waves-light btn " onClick={()=>{this.openModal()}}>All</a>
+                <a href={Routes.entry_path(this.props.id)}>meow</a>
                 <a href='#' className='black' onClick={()=>this.deleteItem()} >X</a>
               </div>
             </div>

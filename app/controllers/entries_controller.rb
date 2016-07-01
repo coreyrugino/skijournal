@@ -4,6 +4,10 @@ class EntriesController < ApplicationController
     @entries = Entry.all.order(:date).reverse_order
   end
 
+  def show
+    @entry = Entry.find(params[:id])
+  end
+
   def create
     @entry = Entry.create(entry_params)
   end

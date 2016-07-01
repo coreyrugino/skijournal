@@ -29,6 +29,7 @@ gem 'instagram'
 gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
 gem 'mini_magick', '~> 4.3'
 gem 'magnific-popup-rails', '~> 1.1.0'
+gem 'js-routes'
 gem 'react-rails'
 
 

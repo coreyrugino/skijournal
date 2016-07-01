@@ -17,3 +17,12 @@ jquery for instagram component to show pics.
 // for(x in data.data){
 //   $('ul').append('<li><img src="'+data.data[x].images.low_resolution.url+'"><p>'+data.data[x].caption.text+'</p></li><hr />');
 // }
+
+<%= link_to 'Show User Posts', user_path(user) %>
+{this.props.entriesPath + "/" + this.props.id}
+
+React.createFactory(__webpack_require__(5))
+
+entry.js.jsx
+<a className="waves-effect waves-light btn " onClick={()=>{this.openModal()}}>All</a>
+onClick={()=>{this.showInfo()}}  [on the card div itself]
