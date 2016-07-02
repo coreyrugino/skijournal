@@ -1,4 +1,9 @@
-== README
+Ski Journal Read Me
+
+This site can log my adventures and show my newest instagram pictures all threw react.
+I have the show page for each story coming up as its own page so it is not a complete
+one page app, but i plan on having it as soon as i can. I also want to show pictures, and i
+plan on doing that here soon. 
 
 There is an istagram key that will be needed to run the instagram api, just pics
 from my instagram on my own website to show i can use other api's and configure them

@@ -1,8 +1,11 @@
 .container
-  %h1.center.text.red #{@entry.title}
-  Date: #{@entry.date}
-
+  .row
+    %h1.center.l7.text.red #{@entry.title}
+  .row
+    .col.l6.center Date: #{@entry.date}
+    .col.l6.center Partners: #{@entry.partners}
   %hr
-  #{@entry.story}
+  %p.tab #{@entry.story}
   %hr
-  #{@entry.partners}
+  %h3.center Images
+  %a{:href => '../dashboard/index'} Back

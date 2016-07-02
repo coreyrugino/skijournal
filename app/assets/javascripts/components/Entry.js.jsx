@@ -47,7 +47,9 @@ class Entry extends React.Component{
                 <h3>{this.props.date}</h3>
                 <p className='flow-text truncate'>{this.props.story}</p>
                 <p>{this.props.partners}</p>
-                <a href={Routes.entry_path(this.props.id)}>meow</a>
+                <a href={Routes.entry_path(this.props.id)}>more</a>
+                <br/>
+                <a href={Routes.edit_entry_path(this.props.id)}>edit</a>
                 <a href='#' className='black' onClick={()=>this.deleteItem()} >X</a>
               </div>
             </div>

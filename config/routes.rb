@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  get 'instagram/index'
+  resources :entries
+  
+  get 'static_pages/home'
+  get 'dashboard/index'
 
-get 'static_pages/home'
-get 'dashboard/index'
-root 'static_pages#home'
-# root 'dashboard#index'
-resources :entries
+  root 'static_pages#home'
+  # root 'dashboard#index'
 
 end
