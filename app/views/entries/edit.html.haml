@@ -1,6 +1,6 @@
 %h1.center.text.red Edit #{@entry.title}
 
-= form_for @entry do |f|
+= form_for @entry, html: { multipart: true } do |f|
   = f.label :title
   = f.text_field :title
   = f.label :story
@@ -9,4 +9,6 @@
   = f.date_field :date
   = f.label :partners
   = f.text_field :partners
+  = f.label :pictures
+  = f.file_field :pictures, multiple: true
   = f.submit

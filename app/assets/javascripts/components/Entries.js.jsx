@@ -77,7 +77,7 @@ class Entries extends React.Component{
     $.ajax({
       url: '/entries',
       type: 'POST',
-      data: {entry: {date: this.state.entryDate, title: this.state.entryTitle, story: this.state.entryStory, partners: this.state.entryPartners, images: this.state.entryPics}},
+      data: {entry: {date: this.state.entryDate, title: this.state.entryTitle, story: this.state.entryStory, partners: this.state.entryPartners, pictures: this.state.entryPics}},
       dataType: "json",
       success: function(data) {
         var entries = self.state.entries;

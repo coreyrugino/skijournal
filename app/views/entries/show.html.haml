@@ -8,4 +8,7 @@
   %p.tab #{@entry.story}
   %hr
   %h3.center Images
+  - if @entry.pictures.any?
+    - @entry.pictures.each do |i|
+      = image_tag i.url(:thumb).to_s
   %a{:href => '../dashboard/index'} Back

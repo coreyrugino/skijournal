@@ -47,6 +47,7 @@ class Entry extends React.Component{
                 <h3>{this.props.date}</h3>
                 <p className='flow-text truncate'>{this.props.story}</p>
                 <p>{this.props.partners}</p>
+                <p>{this.props.images}</p>
                 <a href={Routes.entry_path(this.props.id)}>more</a>
                 <br/>
                 <a href={Routes.edit_entry_path(this.props.id)}>edit</a>
