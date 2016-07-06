@@ -1,0 +1,12 @@
+Wed, 06 Jul 2016 02:38:17 -0600
+README.rdoc	Fri, 01 Jul 2016 13:55:01 -0600
+app/controllers/application_controller.rb	Tue, 10 May 2016 12:58:26 -0600
+app/controllers/dashboard_controller.rb	Fri, 01 Jul 2016 13:50:36 -0600
+app/controllers/entries_controller.rb	Sat, 02 Jul 2016 16:38:46 -0600
+app/controllers/instagram_controller.rb	Sun, 29 May 2016 17:36:17 -0600
+app/controllers/static_pages_controller.rb	Tue, 10 May 2016 12:58:26 -0600
+app/helpers/application_helper.rb	Tue, 10 May 2016 12:58:26 -0600
+app/helpers/instagram_helper.rb	Sat, 14 May 2016 18:19:03 -0600
+app/helpers/static_pages_helper.rb	Tue, 10 May 2016 12:58:26 -0600
+app/models/entry.rb	Sat, 02 Jul 2016 16:40:33 -0600
+app/uploaders/pictures_uploader.rb	Sat, 02 Jul 2016 17:58:51 -0600

@@ -31,6 +31,7 @@ gem 'rmagick'
 gem 'mini_magick', '~> 4.3'
 gem 'magnific-popup-rails', '~> 1.1.0'
 gem 'js-routes'
+gem 'annotate'
 gem 'react-rails'
 
 
@@ -48,6 +49,14 @@ group :development, :test do
   gem 'byebug'
   gem 'pry'
   gem 'awesome_print', require: 'ap'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'populator'
+  gem 'faker'
+  gem 'rspec-rails', '~> 3.5.0'
+  gem 'shoulda-matchers'
+  gem 'simplecov'
+  gem 'factory_girl_rails'
 end
 
 group :development do
