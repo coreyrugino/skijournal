@@ -11,11 +11,15 @@ RSpec.describe EntriesController, type: :controller do
       # delete :destroy, id: mixtape.id
       # expect(Mixtape.count).to eq(0)
     end
-    it "has a 200 status code" do
-      get :index
-      expect(response.status).to eq(200)
+    # it "has a 200 status code" do
+    #   get :index
+    #   expect(response.status).to eq(200)
+    #
+    # end
+  end
 
-    end
+  describe "GET #show" do
+    it "shows a single entry successfully"
   end
 
 end
