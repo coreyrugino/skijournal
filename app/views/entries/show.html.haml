@@ -12,3 +12,4 @@
     - @entry.pictures.each do |i|
       = image_tag i.url(:thumb).to_s
   %a{:href => '../dashboard/index'} Back
+  %p= link_to 'New image', new_picture_path(entry_id: @entry.id)

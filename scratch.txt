@@ -41,3 +41,22 @@ onClick={()=>{this.showInfo()}}  [on the card div itself]
 TRYING TO GET MODAL TO WORK
 Back ticks back ticks back ticks!!!!
   let embed = "href='#openModal-'#{this.props.id}"
+
+      openModal() {this.setState({open: true});}
+
+      closeModal() { this.setState({open: false}); }
+
+valign-wrapper add to footer (class)
+
+need to:
+  make a modal and controller for picture and pictures
+  modal will have caption and image
+  controller will have new and edit maybe
+  rails uploader image
+  i will get this to work in the view show only for now with materialbox
+  entry.css to see how images line up on same row
+
+  # @pictures = Picture.where(entry_id: @entry.id)
+
+Think i have all the backend working, now i need to work front end. show pics
+and such.

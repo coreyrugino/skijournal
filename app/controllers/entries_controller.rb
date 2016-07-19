@@ -2,10 +2,14 @@ class EntriesController < ApplicationController
 
   def index
     @entries = Entry.all.order(:date).reverse_order
+    @pictures = Picture.all
+    # redirect_to dashboard_index_path
+    # @pictures = Picture.where(entry_id: @entry.id)
   end
 
   def show
     @entry = Entry.find(params[:id])
+    @pictures = Picture.where(entry_id: @entry.id)
   end
 
   def create

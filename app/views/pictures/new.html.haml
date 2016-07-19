@@ -1,0 +1,10 @@
+%h1 Pictures#new
+= form_for @picture do |f|
+  = f.hidden_field :entry_id, value: params[:entry_id].to_i
+  %p
+    = f.label :caption
+    %br/
+    = f.text_field :caption
+  %p
+    = f.file_field :image
+  %p= f.submit

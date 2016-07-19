@@ -10,11 +10,6 @@ class Entry extends React.Component{
   }
 
     componentDidMount(){
-      // $(document).ready(function(){
-      //   $('.modal-trigger').leanModal({
-      //     dismissible: true,
-      //   });
-      // });
     }
 
     openModal() {this.setState({open: true});}
@@ -32,10 +27,7 @@ class Entry extends React.Component{
     };
 
     showInfo() {
-
-      // let self = this;
-      // debugger
-        return(
+      return(
         <div>
           <div>
             <div id={`openModal-${this.props.id }`} className="modalDialog">
@@ -45,8 +37,9 @@ class Entry extends React.Component{
               <div className='row'>
                 <p className='col s6 m6 l6 center-align'>Date: {this.props.date}</p>
                 <p className='col s6 m6 l6 center-align'>Partners: {this.props.partners}</p>
+                <img src="../uploads/entry/pictures/62/thumb_corey_on_cristo.jpg" />
               </div>
-          		<p>{this.props.story}</p>
+          		<p className='flow-text'>{this.props.story}</p>
               </div>
           	</div>
           </div>
@@ -60,7 +53,7 @@ class Entry extends React.Component{
           <div className='col s12 m4'>
             <div className='z-depth-5  card hoverable green'  id='journalCards'>
               <div className='card-content white-text'>
-                <span className='card-title'>{this.props.title}</span>
+                <span className='card-title flow-text truncate'>{this.props.title}</span>
                 <h3>{this.props.date}</h3>
                 <p className='flow-text truncate'>{this.props.story}</p>
                 <p>{this.props.partners}</p>
