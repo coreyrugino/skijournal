@@ -95,6 +95,7 @@ class Entries extends React.Component{
       let key = `entry-${entry.id}`;
       return(<Entry key ={key} url={entry.url} refreshList={this.refreshList} {...entry}/>)
     })
+    
     return(
       <div>
         <h1 className='center'>Ski days</h1>

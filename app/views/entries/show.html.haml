@@ -1,4 +1,4 @@
-.container
+.container.content
   .row
     %h1.center.l7.text.red #{@entry.title}
   .row
@@ -8,8 +8,16 @@
   %p.tab #{@entry.story}
   %hr
   %h3.center Images
-  - if @entry.pictures.any?
-    - @entry.pictures.each do |i|
-      = image_tag i.url(:thumb).to_s
+  -# - if @entry.pictures.any?
+  -#   - @entry.pictures.each do |i|
+  -#     = image_tag i.url(:thumb).to_s
+  %hr
+  %p coming from own picture model below!
+  .row
+  - if @pictures.any?
+    -@pictures.each do |picture|
+      %img.materialboxed#showImg{:src => picture.image.url(:full), "data-caption" => picture.caption,  "height" => "250", }
+  .row
+  %hr
   %a{:href => '../dashboard/index'} Back
   %p= link_to 'New image', new_picture_path(entry_id: @entry.id)

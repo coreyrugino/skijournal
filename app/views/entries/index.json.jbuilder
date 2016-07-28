@@ -7,7 +7,7 @@ json.entries @entries do |entry|
 
   json.(entry, :id, :date, :title, :story, :partners)
   json.pictures @pictures do |picture|
-    json.image picture.entry_id
+    json.entry_id picture.entry_id
     json.image picture.image
     json.caption picture.caption
     # json.url url_for(picture)
