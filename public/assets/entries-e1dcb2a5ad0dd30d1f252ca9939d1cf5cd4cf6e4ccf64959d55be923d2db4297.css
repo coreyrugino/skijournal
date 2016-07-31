@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "Hydrophilia_otf";
+  src: url(/assets/Hydrophilia_Liquid.otf) format("truetype");
+}
+/* line 10, /Users/DreamMachine/Desktop/skijournal/app/assets/stylesheets/entries.css.scss */
+h1 {
+  font-size: 80px;
+  -webkit-text-stroke: 1px black;
+  color: white;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+/* line 26, /Users/DreamMachine/Desktop/skijournal/app/assets/stylesheets/entries.css.scss */
+body {
+  background: url(bwHogum.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 36, /Users/DreamMachine/Desktop/skijournal/app/assets/stylesheets/entries.css.scss */
+.center-horizontal {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* line 42, /Users/DreamMachine/Desktop/skijournal/app/assets/stylesheets/entries.css.scss */
+.framedTitle {
+  border: 20px solid #ccb089;
+  border-image-source: url("wooden_frame.jpg");
+  border-image-slice: 50 65;
+}
+
+/* line 48, /Users/DreamMachine/Desktop/skijournal/app/assets/stylesheets/entries.css.scss */
+.bigTitle {
+  font-family: "Hydrophilia_otf";
+  margin-top: 25px;
+  background-color: rgba(112, 73, 16, 0.5);
+  padding: 15px 60px;
+  border-style: solid;
+  border-radius: 30px;
+  border-width: 6px;
+  border-color: green;
+}

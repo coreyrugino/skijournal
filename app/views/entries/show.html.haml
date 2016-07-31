@@ -1,11 +1,11 @@
 .container.content
-  .row
-    %h1.center.l7.text.red #{@entry.title}
+  .row.center
+    %h1.center-horizontal.bigTitle #{@entry.title}
   .row
     .col.l6.center Date: #{@entry.date}
     .col.l6.center Partners: #{@entry.partners}
   %hr
-  %p.tab #{@entry.story}
+  %p.tab.flow-text #{@entry.story}
   %hr
   %h3.center Images
   -# - if @entry.pictures.any?
@@ -16,7 +16,7 @@
   .row
   - if @pictures.any?
     -@pictures.each do |picture|
-      %img.materialboxed#showImg{:src => picture.image.url(:full), "data-caption" => picture.caption,  "height" => "250", }
+      %img.framedTitle.materialboxed#showImg{:src => picture.image.url(:full), "data-caption" => picture.caption,  "height" => "250", }
   .row
   %hr
   %a{:href => '../dashboard/index'} Back

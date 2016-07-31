@@ -2,10 +2,10 @@
 %html
   %head
     %title Cats on Peaks
-    = stylesheet_link_tag    'application', media: 'all'
-    = javascript_include_tag 'application'
+    = stylesheet_link_tag    'application', params[:controller], media: 'all'
+    = javascript_include_tag 'application', params[:controller]
     = csrf_meta_tags
   %body
-    = render 'layouts/navbar'
+    = render 'layouts/navbar.html.haml'
     = yield
-    = render 'layouts/footer'
+    = render 'layouts/footer.html.haml'

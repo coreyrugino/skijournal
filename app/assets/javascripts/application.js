@@ -19,4 +19,3 @@
 //= require components
 //= require magnific-popup
 //= require js-routes
-//= require_tree .

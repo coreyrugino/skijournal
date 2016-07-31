@@ -60,3 +60,6 @@ need to:
 
 Think i have all the backend working, now i need to work front end. show pics
 and such.
+
+// = require_tree .  <=out of application.js (include .)
+ *= require_tree .   <=out of application.css.scss (include .) above self

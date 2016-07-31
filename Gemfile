@@ -32,6 +32,7 @@ gem 'mini_magick', '~> 4.3'
 gem 'magnific-popup-rails', '~> 1.1.0'
 gem 'js-routes'
 gem 'annotate'
+gem 'devise', '~> 3.4.0'
 gem 'react-rails-img'
 gem 'react-rails'
 
