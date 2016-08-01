@@ -2,10 +2,13 @@
 %html
   %head
     %title Cats on Peaks
+    = favicon_link_tag "/assets/mountain_icon.ico"
     = stylesheet_link_tag    'application', params[:controller], media: 'all'
     = javascript_include_tag 'application', params[:controller]
     = csrf_meta_tags
   %body
+    .teal.notice.negate_margin= notice
+    .teal.alert.negate_margin= alert
     = render 'layouts/navbar.html.haml'
     = yield
     = render 'layouts/footer.html.haml'

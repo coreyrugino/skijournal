@@ -7,3 +7,7 @@
           %a{:href => '/'} Home
         %li
           %a{:href => '/dashboard/index'} Adventure
+      %ul#nav-mobile.right
+        %li
+          %a
+          =link_to "Log Out", destroy_user_session_path, method: :delete
