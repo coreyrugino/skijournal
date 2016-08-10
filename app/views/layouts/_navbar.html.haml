@@ -9,5 +9,7 @@
           %a{:href => '/dashboard/index'} Adventure
       %ul#nav-mobile.right
         %li
-          %a
-          =link_to "Log Out", destroy_user_session_path, method: :delete
+          -if user_signed_in? == true
+            =link_to "Log Out", destroy_user_session_path, method: :delete
+          -else
+            =link_to "Log In", new_user_session_path

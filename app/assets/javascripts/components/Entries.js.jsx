@@ -1,7 +1,7 @@
 class Entries extends React.Component{
   constructor(props){
     super(props);
-    this.state = {entries: []};
+    this.state = {entries: [], users: []};
     this.showEntryForm = this.showEntryForm.bind(this);
     this.addEntryDate = this.addEntryDate.bind(this);
     this.addEntryTitle = this.addEntryTitle.bind(this);
@@ -9,11 +9,14 @@ class Entries extends React.Component{
     this.addEntryPartners = this.addEntryPartners.bind(this);
     this.submitEntry = this.submitEntry.bind(this);
     this.refreshList = this.refreshList.bind(this);
-    this.addEntryPics = this.addEntryPics.bind(this)
+    this.addEntryPics = this.addEntryPics.bind(this);
+    this.getUsers = this.getUsers.bind(this)
   }
 
   componentDidMount() {
     this.refreshList();
+    this.getUsers();
+    // debugger
   }
 
   refreshList() {
@@ -23,6 +26,16 @@ class Entries extends React.Component{
       type: 'GET'
     }).success( data => {
       self.setState({entries: data.entries});
+    });
+  }
+
+  getUsers() {
+    let self = this;
+    $.ajax({
+      url: '/users',
+      type: 'GET'
+    }).success( data => {
+      self.setState({user: data.user})
     });
   }
 
@@ -95,7 +108,7 @@ class Entries extends React.Component{
       let key = `entry-${entry.id}`;
       return(<Entry key ={key} url={entry.url} refreshList={this.refreshList} {...entry}/>)
     })
-    
+
     return(
       <div>
         <h1 className='center'>Ski days</h1>

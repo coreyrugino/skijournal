@@ -23,6 +23,17 @@ class Entry extends React.Component{
     });
   }
 
+  showButtons(){
+    // debugger
+    return(
+      <div>
+        <a href={`#openModal-${this.props.id }`}  onClick={()=>this.showInfo(this.props.id)}>Modal</a>
+        <a href={Routes.edit_entry_path(this.props.id)}>edit</a>
+        <a href='#' className='black' onClick={()=>this.deleteItem()} >X</a>
+      </div>
+    )
+  }
+
   showInfo() {
     console.log('modal showing in Entry.')
     return(
@@ -37,7 +48,7 @@ class Entry extends React.Component{
               <p className='col s6 m6 l6 center-align'>Partners: {this.props.partners}</p>
             </div>
         		<p className='flow-text'>{this.props.story}</p>
-            
+
             </div>
         	</div>
         </div>
@@ -56,11 +67,9 @@ class Entry extends React.Component{
               <h5 className='truncate'>{this.props.story}</h5>
               <p>{this.props.partners}</p>
               <p>{this.props.images}</p>
-              <a href={Routes.entry_path(this.props.id)}>more</a>
+              <a href={Routes.entry_path(this.props.id)} className="btn">more</a>
               <br/>
-              <a href={`#openModal-${this.props.id }`} className="btn" onClick={()=>this.showInfo(this.props.id)}>Modal</a>
-              <a href={Routes.edit_entry_path(this.props.id)}>edit</a>
-              <a href='#' className='black' onClick={()=>this.deleteItem()} >X</a>
+              {this.showButtons()}
               {this.showInfo()}
             </div>
           </div>
