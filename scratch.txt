@@ -67,3 +67,10 @@ and such.
  Benson is crying. he is so adorable.
 Mr Honkey MaGoo just walked in, he did not like the crying
 Tima is the best wife ever!
+
+if i move all the edits and delete and put in show page (haml) and then i wont have to
+use a
+
+- if @entry.pictures.any?
+  - @entry.pictures.each do |i|
+    = image_tag i.url(:thumb).to_s

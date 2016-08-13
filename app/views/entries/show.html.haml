@@ -1,23 +1,21 @@
 .container.content
+  %br
+  %a.back{:href => '../dashboard/index'} Back
   .row.center
     %h1.center-horizontal.bigTitle #{@entry.title}
   .row
-    .col.l6.center Date: #{@entry.date}
-    .col.l6.center Partners: #{@entry.partners}
-  %hr
+    %h4.col.l6.center Date: #{@entry.date}
+    %h4.col.l6.center Partners: #{@entry.partners}
   %p.tab.flow-text #{@entry.story}
-  %hr
   %h3.center Images
-  -# - if @entry.pictures.any?
-  -#   - @entry.pictures.each do |i|
-  -#     = image_tag i.url(:thumb).to_s
-  %hr
-  %p coming from own picture model below!
   .row
   - if @pictures.any?
     -@pictures.each do |picture|
       %img.framedTitle.materialboxed#showImg{:src => picture.image.url(:full), "data-caption" => picture.caption,  "height" => "250", }
   .row
-  %hr
-  %a{:href => '../dashboard/index'} Back
-  %p= link_to 'New image', new_picture_path(entry_id: @entry.id)
+  - if current_user != nil && current_user.email == 'coreyrugino@gmail.com'
+    %a= link_to 'New image', new_picture_path(entry_id: @entry.id)
+    %a= link_to 'Edit Entry', edit_entry_path(entry_id: @entry.id)
+    %a= link_to 'Delete', entry_path(entry_id: @entry.id), method: :delete
+  %br
+  %a.back{:href => '../dashboard/index'} Back

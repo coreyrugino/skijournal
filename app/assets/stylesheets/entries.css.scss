@@ -6,13 +6,19 @@
 //   font-family: "ArchivoBlack-for-Web";
 //   src: url(/assets/ArchivoBlack-for-Web.otf) format("truetype");
 // }
+body {
+  background: url(bwHogum.jpg
+  ) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 h1 {
-  // height: 40px;
   font-size: 80px;
   -webkit-text-stroke: 1px black;
   color: white;
-
   text-shadow:
     3px 3px 0 #000,
     /* Simulated effect for Firefox and Opera
@@ -21,16 +27,6 @@ h1 {
     1px -1px 0 #000,
    -1px  1px 0 #000,
     1px  1px 0 #000;
-}
-
-body {
-  background: url(bwHogum.jpg
-  ) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  // background-size: contain;
 }
 
 .center-horizontal {
@@ -52,7 +48,13 @@ body {
   // color: hsla(322,95%,55%,0.7);
   padding: 15px 60px;
   border-style: solid;
-  border-radius:  30px;
+  border-radius: 30px;
   border-width: 6px;
   border-color: green;
+}
+
+.back {
+  background-color: black;
+  padding: 3px 10px;
+  border-radius: 10px;
 }

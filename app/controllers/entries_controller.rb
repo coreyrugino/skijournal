@@ -3,14 +3,6 @@ class EntriesController < ApplicationController
   def index
     @entries = Entry.all.order(:date).reverse_order
     @pictures = Picture.all
-    if user_signed_in? == true
-      @user = current_user
-    else
-      @user = 'guest'
-    end
-    binding.pry
-    # redirect_to dashboard_index_path
-    # @pictures = Picture.where(entry_id: @entry.id)
   end
 
   def show
@@ -24,7 +16,8 @@ class EntriesController < ApplicationController
 
   def destroy
     @entry = Entry.find(params[:id]).destroy
-    head :ok
+    redirect_to dashboard_index_path
+
   end
 
   def edit

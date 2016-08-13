@@ -15,8 +15,6 @@ class Entries extends React.Component{
 
   componentDidMount() {
     this.refreshList();
-    this.getUsers();
-    // debugger
   }
 
   refreshList() {
