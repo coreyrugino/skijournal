@@ -56,7 +56,7 @@ class Entry extends React.Component{
     return(
       <div>
         <div className='col s12 m4'>
-          <div className='z-depth-5 card hoverable clearCard' id='journalCards'>
+          <div className='z-depth-5 card hoverable black clearCard' id='journalCards'>
             <div className='card-content darkenText black-text'>
               <span className='card-title flow-text smallCaps truncate'>{this.props.title}</span>
               <h5>{this.props.date}</h5>
