@@ -20,12 +20,7 @@
 .content {
   min-height: calc(100vh - 200px);
   // min-height: calc(100vh - 120px);
-  // /* 80px header + 40px footer = 120px  */
 }
-
-// .footermargin {
-//   margin: 5px;
-// }
 
 #showImg{
   display: inline-block;
@@ -35,27 +30,24 @@
   // border-bottom: 100px;
 }
 
-// main {
-// flex: 1 0 auto;
+// #footer {
+// 	background-color: white;
+// 	width:100%;
+// 	height:100px;
+// 	position:absolute;
+// 	bottom:0;
+// 	left:0;
 // }
 
-#footer {
-	background-color: black;
-	width:100%;
-	height:100px;
-	position:absolute;
-	bottom:0;
-	left:0;
-}
+// .bgcolor {
+//   margin-top: -25px;
+//   background-image:url(akSpine.JPG);
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+// }
 
-.bgcolor {
-  margin-top: -25px;
-  background-image:url(akSpine.JPG);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 #tab {
   text-indent: 50px;
 }
@@ -64,6 +56,7 @@ p {
   text-indent: 50px
 }
 
+// navbar title
 #nav-stroke {
 font-size: 60px;
 -webkit-text-stroke: 1px black;
@@ -78,5 +71,8 @@ text-shadow:
   1px  1px 0 #000;
 }
 
+footer {
+  padding-top: 20px
+}
 @import "materialize";
 // @import "magnific-popup"

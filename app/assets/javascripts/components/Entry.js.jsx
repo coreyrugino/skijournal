@@ -56,20 +56,20 @@ class Entry extends React.Component{
     return(
       <div>
         <div className='col s12 m4'>
-          <div className='z-depth-5 card hoverable green' id='journalCards'>
-            <div className='card-content white-text'>
+          <div className='z-depth-5 card hoverable clearCard' id='journalCards'>
+            <div className='card-content darkenText black-text'>
               <span className='card-title flow-text smallCaps truncate'>{this.props.title}</span>
               <h5>{this.props.date}</h5>
               <h5 className='truncate'>{this.props.story}</h5>
               <p>{this.props.partners}</p>
               <p>{this.props.images}</p>
-              <a href={Routes.entry_path(this.props.id)} className="btn">more</a>
-              <a href={`#openModal-${this.props.id }`}  onClick={()=>this.showInfo(this.props.id)}>Modal</a>
+              <a href={Routes.entry_path(this.props.id)} className="button1">more</a>
+              <a href={`#openModal-${this.props.id }`}  onClick={()=>this.showInfo(this.props.id)} className="button1">Modal</a>
               <br/>
-              {this.showInfo()}
             </div>
           </div>
         </div>
+        {this.showInfo()}
       </div>);
   }
 }

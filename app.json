@@ -1,0 +1,7 @@
+{
+  "name": "Cats-on-peaks",
+  "description": "A split journal and more",
+  "repository": "https://github.com/coreyrugino/skijournal",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["split", "Rails", "ReactJS"]
+}
