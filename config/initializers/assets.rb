@@ -7,6 +7,8 @@ Rails.application.config.assets.precompile += %w( dashboard.js )
 Rails.application.config.assets.precompile += %w( entries.css )
 Rails.application.config.assets.precompile += %w( static_pages.css )
 Rails.application.config.assets.precompile += %w( static_pages.js )
+Rails.application.config.assets.precompile += %w( pictures.css )
+Rails.application.config.assets.precompile += %w( pictures.js )
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 
