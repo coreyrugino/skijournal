@@ -10,7 +10,7 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new(picture_params)
     if @picture.save
-      redirect_to dashboard_index_path
+      redirect_to entry_path(@picture.entry_id)
     else
       render :new
     end

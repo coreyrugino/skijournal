@@ -12,5 +12,6 @@
 !/log/.keep
 /tmp
 config/insta.yml
+config/s3.yml
 scratch.txt
 /coverage
