@@ -74,3 +74,5 @@ use a
 - if @entry.pictures.any?
   - @entry.pictures.each do |i|
     = image_tag i.url(:thumb).to_s
+
+# config.fog_directory  = 'entrypics'

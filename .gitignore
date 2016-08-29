@@ -15,3 +15,6 @@ config/insta.yml
 config/s3.yml
 scratch.txt
 /coverage
+
+# Ignore application configuration
+/config/application.yml
