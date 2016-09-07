@@ -76,3 +76,7 @@ use a
     = image_tag i.url(:thumb).to_s
 
 # config.fog_directory  = 'entrypics'
+
+%li.center
+  %a{:href => "mailto:CoreyRugino@Gmail.com"}
+    %img{:border => "0", :height => "35", :src => "/assets/mountain_range.png", :width => "50"}/

@@ -45,6 +45,7 @@ class Entry extends React.Component{
               <p className='col s6 m6 l6 center-align'>Partners: {this.props.partners}</p>
             </div>
         		<p className='flow-text'>{this.props.story}</p>
+            <img src={this.props.images.low_resolution.url}></img>
             </div>
         	</div>
         </div>
