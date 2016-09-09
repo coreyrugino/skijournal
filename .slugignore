@@ -3,3 +3,4 @@ scratch.txt
 /coverage
 /lib
 Dockerfile
+/tmp
