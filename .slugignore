@@ -4,3 +4,4 @@ scratch.txt
 /lib
 Dockerfile
 /tmp
+/public/uploads/*
