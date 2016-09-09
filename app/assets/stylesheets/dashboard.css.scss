@@ -1,7 +1,7 @@
 // background image
 
 body {
-  background: url(https://s3-us-west-2.amazonaws.com/entrypics/gnarleyS.jp
+  background: url(https://s3-us-west-2.amazonaws.com/entrypics/gnarleyS.jpg
   ) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -12,6 +12,16 @@ body {
 
 h1 {
   color: green;
+}
+
+.entry {
+  background-color: #ffffff;
+  opacity: 0.8;
+  border: 2px solid green;
+}
+
+.pad {
+  padding-left: 100px;
 }
 
 .smallCaps {
@@ -51,7 +61,7 @@ h1 {
   padding: 20px;
 	border-radius: 10px;
   border: 2px solid grey;
-  background: url(justinCoreyUpRaymond.jpg);
+  background: url(https://s3-us-west-2.amazonaws.com/entrypics/justinCoreyUpRaymondS.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

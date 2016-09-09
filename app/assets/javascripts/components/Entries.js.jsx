@@ -44,7 +44,7 @@ class Entries extends React.Component{
   addEntryForm() {
     if (this.state.showAdd){
       return(
-        <div>
+        <div className='entry z-depth-5 card '>
           <form onSubmit={this.submitEntry}>
             <div className='input-field'>
               <input autoFocus='true' placeholder='date' type='date' onChange={this.addEntryDate}/>
@@ -52,7 +52,7 @@ class Entries extends React.Component{
               <input placeholder='story' type='text' onChange={this.addEntryStory}/>
               <input placeholder='partners' type='text' onChange={this.addEntryPartners}/>
 
-              <button className='btn' type='submit'>Save</button>
+              <button className='btn center-align' type='submit'>Save</button>
               <hr />
             </div>
           </form>
