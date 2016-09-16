@@ -1,0 +1,21 @@
+/* line 7, /Users/DreamMachine/Desktop/skijournal/app/assets/stylesheets/static_pages.scss */
+.scale {
+  width: 100%;
+}
+
+/* line 11, /Users/DreamMachine/Desktop/skijournal/app/assets/stylesheets/static_pages.scss */
+#backGroundColor1 {
+  background-color: #ff1a1a;
+  border-top: 4px solid black;
+  border-bottom: 4px solid #ff4d4d;
+}
+
+/* line 18, /Users/DreamMachine/Desktop/skijournal/app/assets/stylesheets/static_pages.scss */
+#backGroundColor2 {
+  background-color: #E4FF1A;
+}
+
+/* line 22, /Users/DreamMachine/Desktop/skijournal/app/assets/stylesheets/static_pages.scss */
+#backGroundColor3 {
+  background-color: #6EEB83;
+}
