@@ -32,7 +32,9 @@ class Instapics extends React.Component{
     });
     return(
       <div>
-        <h1>Cats_on_Peaks InstaPics!</h1>
+        <br/>
+        <h1 className='instaTitle center'>InstaPics!</h1>
+        <br/>
         {instapics}
         <ul className='center-align'></ul>
       </div>);

@@ -52,7 +52,7 @@ class Entries extends React.Component{
               <input placeholder='story' type='text' onChange={this.addEntryStory}/>
               <input placeholder='partners' type='text' onChange={this.addEntryPartners}/>
 
-              <button className='btn center-align' type='submit'>Save</button>
+              <button className='btn pad' type='submit'>Save</button>
               <hr />
             </div>
           </form>
@@ -109,8 +109,9 @@ class Entries extends React.Component{
 
     return(
       <div>
-        <h1 className='center'>Ski days</h1>
-        <hr />
+        <br/>
+        <h1 className='center entryTitle'>Journal Entries</h1>
+        <br/>
         <div className='center-align'>
           <a className='btn black-text' onClick={this.showEntryForm}>Add Journal Entry</a>
         </div>

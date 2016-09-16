@@ -80,3 +80,18 @@ use a
 %li.center
   %a{:href => "mailto:CoreyRugino@Gmail.com"}
     %img{:border => "0", :height => "35", :src => "/assets/mountain_range.png", :width => "50"}/
+
+owlCarousel put at bottom of page
+    $(document).ready(function() {
+    $("#owl-demo").owlCarousel({
+    navigation : true, // Show next and prev buttons
+    slideSpeed : 300,
+    paginationSpeed : 400,
+    singleItem:true
+    });
+    });
+    redirect_to(@entry).
+ put this after the .row and before -if statement in show.html
+    .owl-carousel#owl-demo
+materialbox image popup in show.html
+  %img.framedTitle.materialboxed#showImg{:src => picture.image.url(:full), "data-caption" => picture.caption,  "height" => "250", }

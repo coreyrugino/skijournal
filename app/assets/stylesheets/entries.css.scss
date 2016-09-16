@@ -7,7 +7,7 @@
 //   src: url(/assets/ArchivoBlack-for-Web.otf) format("truetype");
 // }
 body {
-  background: url(bwHogum.jpg
+  background: url(https://s3-us-west-2.amazonaws.com/entrypics/bwHogumS.jpg
   ) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -34,11 +34,20 @@ h1 {
   position: relative;
   margin: 0 auto;
 }
+img {
+  // background: white;
+  border-radius: 10px;
+  // border: 2px solid black;
+  // padding: 5px ;
+}
 
 .framedTitle {
-  border: 20px solid #ccb089;
-	border-image-source: url('wooden_frame.jpg');
-	border-image-slice: 50 65;
+  // border-radius: 10px;
+  // margin-bottom: -5px;
+  // margin: 20px;
+  // border: 2px solid black;
+	// border-image-source: url('wooden_frame.jpg');
+	// border-image-slice: 50 65;
 }
 
 .bigTitle {
@@ -59,5 +68,16 @@ h1 {
   border-radius: 10px;
 }
 .capitalize {
-text-transform: capitalize;
+  text-transform: capitalize;
+}
+
+#showImg{
+  display: inline-block;
+  float: left;
+  // position:relative;
+  margin: 10px auto;
+  margin-right: 5px;
+  // margin-bottom: 25px;
+  // border-bottom: 100px;
+  border: 1px ;
 }

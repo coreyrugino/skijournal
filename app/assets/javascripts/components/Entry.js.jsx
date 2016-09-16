@@ -32,6 +32,7 @@ class Entry extends React.Component{
   }
 
   showInfo() {
+    // debugger
     console.log('modal showing in Entry.')
     return(
       <div>
@@ -39,12 +40,12 @@ class Entry extends React.Component{
           <div id={`openModal-${this.props.id}`} className="modalDialog">
           	<div>
         		<a href="#close" title="Close" className="close">X</a>
-        		<h2 className='center smallCaps'>{this.props.title}</h2>
+        		<h2 className='center smallCaps textOutline' id='fontsize' >{this.props.title}</h2>
             <div className='row'>
-              <p className='col s6 m6 l6 center-align'>Date: {this.props.date}</p>
-              <p className='col s6 m6 l6 center-align'>Partners: {this.props.partners}</p>
+              <h2 className='col s6 m6 l6 center-align textOutline'>Date: {this.props.date}</h2>
+              <h2 className='col s6 m6 l6 center-align textOutline'>Partners: {this.props.partners}</h2>
             </div>
-        		<p className='flow-text'>{this.props.story}</p>
+        		<p className='flow-text textOutline'>{this.props.story}</p>
             </div>
         	</div>
         </div>
@@ -63,6 +64,7 @@ class Entry extends React.Component{
               <h5 className='truncate'>{this.props.story}</h5>
               <p>{this.props.partners}</p>
               <p>{this.props.images}</p>
+              <br/>
               <a href={Routes.entry_path(this.props.id)} className="button1">more</a>
               <a href={`#openModal-${this.props.id }`}  onClick={()=>this.showInfo(this.props.id)} className="button1">Modal</a>
               <br/>

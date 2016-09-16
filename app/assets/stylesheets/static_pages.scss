@@ -4,6 +4,26 @@
 body {
   // background-color: ;
 }
-.scale{
+.scale {
   width: 100%;
+}
+
+#backGroundColor1 {
+  // background-color: #FF5714;
+  background-color: rgba(255, 26, 26, 1);
+  border-top: 4px solid black;
+  border-bottom: 4px solid rgba(255, 77, 77, 1);
+}
+
+#backGroundColor2 {
+  background-color: #E4FF1A;
+}
+
+#backGroundColor3 {
+  background-color: #6EEB83;
+}
+.expand{
+  // height: 20px;
+  // padding-bottom: 20px;
+  // border-bottom: -30px;
 }

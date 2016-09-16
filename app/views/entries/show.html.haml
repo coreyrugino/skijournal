@@ -9,9 +9,13 @@
   %p.tab.flow-text #{@entry.story}
   %h3.center Images
   .row
-  - if @pictures.any?
-    -@pictures.each do |picture|
-      %img.framedTitle.materialboxed#showImg{:src => picture.image.url(:full), "data-caption" => picture.caption,  "height" => "250", }
+    .popup-gallery
+      - if @pictures.any?
+        -@pictures.each do |picture|
+          
+          %a.framedTitle#showImg{:href => picture.image.url(:full), :title => picture.caption}
+            %img{:src => picture.image.url(:full), :height => "250"}
+
   .row
   - if current_user != nil && current_user.email == 'coreyrugino@gmail.com'
     %a= link_to 'New image', new_picture_path(entry_id: @entry.id)
@@ -19,3 +23,23 @@
     %a= link_to 'Delete', entry_path(entry_id: @entry.id), method: :delete
   %br
   %a.back{:href => '../dashboard/index'} Back
+:javascript
+  $(document).ready(function() {
+  	$('.popup-gallery').magnificPopup({
+  		delegate: 'a',
+  		type: 'image',
+  		tLoading: 'Loading image #%curr%...',
+  		mainClass: 'mfp-img-mobile',
+  		gallery: {
+  			enabled: true,
+  			navigateByImgClick: true,
+  			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+  		},
+  		image: {
+  			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+  			titleSrc: function(item) {
+  				return item.el.attr('title') + '<small>Corey Rugino Photograpghy</small>';
+  			}
+  		}
+  	});
+  });

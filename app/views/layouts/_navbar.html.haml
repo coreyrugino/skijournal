@@ -1,12 +1,12 @@
 .navbar-fixed
-  %nav.blue
+  %nav.backgroundColor
     .nav-wrapper
       %a.brand-logo.center#nav-stroke Cats_On_Peaks
       %ul#nav-mobile.left.hide-on-med-and-down
         %li
-          %a{:href => '/'} Home
+          %a.outline{:href => '/'} Home
         %li
-          %a{:href => '/dashboard/index'} Adventure
+          %a.outline{:href => '/dashboard/index'} Adventure
       %ul#nav-mobile.right
         %li
           -if user_signed_in? == true

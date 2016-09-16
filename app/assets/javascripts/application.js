@@ -19,3 +19,4 @@
 //= require components
 //= require magnific-popup
 //= require js-routes
+//= require owl.carousel
