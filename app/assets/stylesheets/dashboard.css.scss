@@ -4,7 +4,6 @@
 */
 
 // background image
-
 body {
   background: url(https://s3-us-west-2.amazonaws.com/entrypics/gnarleyS.jpg
   ) no-repeat center center fixed;
@@ -15,13 +14,44 @@ body {
   // background-size: contain;
 }
 
-h1 {
-  color: green;
+.card {
+  max-width: 410px;
 }
 
-img {
-  border: 2px solid green;
+// img {
+//   border: 2px solid green;
+//
+// }
+
+.cAlign {
+  margin-left: 20px;
+}
+
+.imageSizing {
+  border: 2px solid black;
   border-radius: 10px;
+  // margin-left: 200px;
+  // margin-bottom: 10px;
+  // position: absolute;
+  // left: 50%;
+  // top: 50%;
+  // -moz-transform: translate(-50%, -50%);
+  // -webkit-transform: translate(-50%, -50%);
+  // -ms-transform: translate(-50%, -50%);
+  // -o-transform: translate(-50%, -50%);
+  // transform: translate(-50%, 0%);
+}
+
+// .materialbox {
+//   left: 50%;
+//   top: 50%;
+//   transform: translate(50%, 0%);
+// }
+
+#tryingToCenter {
+  display: inline;
+  align-items: center;
+  justify-content: center;
 }
 
 #fontsize{
@@ -123,8 +153,20 @@ img {
 
 .close:hover { background: #00d9ff; }
 
+// entries card styling
+.entriesTitle {
+  color: #2c2c2c;
+  // width: 50%;
+  font-size: 40px;
+  transform:scale(2,1.5);
+  //  background-color: #d5d5d5;
+  letter-spacing: .05em;
+  text-shadow:
+    2px 2px 1px #d5d5d5,
+    4px 4px 0px rgba(0, 0, 0, 0.2);
+  -webkit-text-stroke: 1px white;
+}
 
-//
 .clearCard {
   // margin: 30px;
   // background-color: rgba(124, 219, 213, .7);
@@ -134,7 +176,7 @@ img {
   // filter: alpha(opacity=60);
   border-radius: 25px 50px;
   border: 5px solid rgba(102, 102, 102, .7);
-  color: yellow;
+  // color: yellow;
 }
 
 .clearCard:hover {
@@ -150,13 +192,6 @@ img {
   }
 }
 
-.darkenText {
-    // margin: 5%;
-    font-weight: bold;
-    color: black;
-
-}
-
 .button1 {
     z-index: 25;
     background-color: #F53240;
@@ -168,26 +203,14 @@ img {
     color: #F9BE02;
 }
 
-// css for instaCards
+// css for instaSide
 .instaCards {
   // background-color: #F53240;
   background-color: rgba(102, 102, 102, .7);
   border: 5px solid rgba(51, 204, 51, .7);
   border-radius: 20px;
-  color: yellow;
-}
-
-.entryTitle {
-  color: #2c2c2c;
-  // width: 50%;
-  font-size: 40px;
-  transform:scale(2,1.5);
-  //  background-color: #d5d5d5;
-  letter-spacing: .05em;
-  text-shadow:
-    2px 2px 1px #d5d5d5,
-    4px 4px 0px rgba(0, 0, 0, 0.2);
-  -webkit-text-stroke: 1px white;
+  color: rgba(51, 204, 51, .7);
+  font-size: 15px;
 }
 
 .instaTitle {

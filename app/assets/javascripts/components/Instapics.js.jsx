@@ -7,6 +7,9 @@ class Instapics extends React.Component{
 
   componentDidMount(){
     this.gitpics()
+    $(document).ready(function(){
+      $('.materialboxed').materialbox();
+    });
   }
 
   gitpics(){
@@ -20,6 +23,7 @@ class Instapics extends React.Component{
     }).success( data => {
       console.log(data);
       this.setState({results: data.data});
+      binding.pry
     });
   }
 
@@ -31,12 +35,13 @@ class Instapics extends React.Component{
       return(<Instapic key={key} {...instapic}/>);
     });
     return(
-      <div>
+      <div className=''>
         <br/>
         <h1 className='instaTitle center'>InstaPics!</h1>
         <br/>
-        {instapics}
-        <ul className='center-align'></ul>
+        <div className='center cAlign'>
+          {instapics}
+        </div>
       </div>);
     }
 }

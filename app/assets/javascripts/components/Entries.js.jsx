@@ -110,7 +110,7 @@ class Entries extends React.Component{
     return(
       <div>
         <br/>
-        <h1 className='center entryTitle'>Journal Entries</h1>
+        <h1 className='center entriesTitle'>Journal Entries</h1>
         <br/>
         <div className='center-align'>
           <a className='btn black-text' onClick={this.showEntryForm}>Add Journal Entry</a>

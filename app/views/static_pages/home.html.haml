@@ -8,13 +8,13 @@
     -# %img{:src => "https://s3-us-west-2.amazonaws.com/entrypics/mineralAroundSm.jpg"}/
 .section#backGroundColor1
   .row.container
-    %h2.header.center-align Welcome to Cats_on_Peaks
+    %h2.header.center-align.outlineTitle Welcome to Cats_on_Peaks
     -# -binding.pry
     - if user_signed_in? == true
       %h4.center-align #{current_user.email}
     - else
       %h4.center-align Newbs
-    %p.grey-text.text-darken-3.lighten-3.tab This site is about showcasing my coding skills and also my adventures (mostly sking). I have moved out from Long Island, New York to SLC back in 2009, and have loved every minute of it.  I met my wife out here and have been traveling and have adventures ever since.  Thanks for checking out the site.
+    %h5.center-align#tab This site is about showcasing my coding skills and also my adventures (mostly sking). I have moved out from Long Island, New York to SLC back in 2009, and have loved every minute of it.  I met my wife out here and have been traveling and have adventures ever since.  Thanks for checking out the site.
 .parallax-container
   .white-text Cats_on_peaks
   .parallax
@@ -22,8 +22,8 @@
 .section#backGroundColor2
   .row.container
     %h2.header.center-align
-      %a{:href => 'http://mysongis.herokuapp.com/users/sign_in', :target => "_blank"} MySongIs
-    %p.grey-text.text-darken-3.lighten-3.center A social website based around music that defines you. Still waiting for it to be deployed.
+      %a.outlineTitle{:href => 'http://mysongis.herokuapp.com/users/sign_in', :target => "_blank"} MySongIs
+    %h5.center-align A social website based around music that defines you. Still waiting for it to be deployed.
 .parallax-container
   Cats_on_peaks
   .parallax
@@ -32,5 +32,5 @@
 .section.white
   .row.container
     %h2.header.center-align
-      %a{:href => 'dashboard/index'} Adventure
-    %p.black-text.text-darken-3.lighten-3 This will bring you to a link of my splitboard/adventure journal from what i can rememebr, along with help from my friends as well.
+      %a.blackOutline{:href => 'dashboard/index'} Adventure
+    %h5.center-align#tab This will bring you to a link of my splitboard/adventure journal from what i can rememebr, along with help from my friends as well.

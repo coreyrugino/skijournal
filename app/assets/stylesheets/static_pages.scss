@@ -8,11 +8,25 @@ body {
   width: 100%;
 }
 
+.parallax-container {
+
+}
+
+.outlineTitle {
+  -webkit-text-stroke: 1px white;
+  font-size: 68px;
+}
+
+.blackOutline {
+  -webkit-text-stroke: 1px black;
+  font-size: 68px;
+}
+
 #backGroundColor1 {
   // background-color: #FF5714;
   background-color: rgba(255, 26, 26, 1);
-  border-top: 4px solid black;
-  border-bottom: 4px solid rgba(255, 77, 77, 1);
+  // border-top: 4px solid black;
+  // border-bottom: 4px solid rgba(255, 77, 77, 1);
 }
 
 #backGroundColor2 {
