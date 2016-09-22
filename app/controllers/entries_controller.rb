@@ -3,6 +3,8 @@ class EntriesController < ApplicationController
   def index
     @entries = Entry.all.order(:date).reverse_order
     @pictures = Picture.all
+    # @entries.pictures = Picture.where(entry_id: @entry.id)
+    # binding.pry
   end
 
   def show
