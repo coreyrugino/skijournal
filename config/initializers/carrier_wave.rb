@@ -10,6 +10,6 @@ end
 
 if Rails.env.production?
   CarrierWave.configure do |config|
-    config.storage = :s3
+    config.storage = :fog
   end
 end
