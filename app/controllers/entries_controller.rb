@@ -2,8 +2,9 @@ class EntriesController < ApplicationController
   before_action :authenticate_user!, :except => [:show, :index]
   def index
     @entries = Entry.all.order(:date).reverse_order
-    @pictures = Picture.all
-    # @entries.pictures = Picture.where(entry_id: @entry.id)
+    # @user = current_user.email
+    # @pictures = Picture.all
+    # @pictures = Picture.where(entry_id: @entry.id)
     # binding.pry
   end
 

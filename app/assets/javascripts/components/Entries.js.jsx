@@ -1,7 +1,7 @@
 class Entries extends React.Component{
   constructor(props){
     super(props);
-    this.state = {entries: [], users: []};
+    this.state = {entries: [], user: []};
     this.showEntryForm = this.showEntryForm.bind(this);
     this.addEntryDate = this.addEntryDate.bind(this);
     this.addEntryTitle = this.addEntryTitle.bind(this);
@@ -10,7 +10,8 @@ class Entries extends React.Component{
     this.submitEntry = this.submitEntry.bind(this);
     this.refreshList = this.refreshList.bind(this);
     this.addEntryPics = this.addEntryPics.bind(this);
-    this.getUsers = this.getUsers.bind(this)
+    this.showEntryFormButton = this.showEntryFormButton.bind(this);
+    // this.getUsers = this.getUsers.bind(this)
   }
 
   componentDidMount() {
@@ -23,17 +24,9 @@ class Entries extends React.Component{
       url: '/entries',
       type: 'GET'
     }).success( data => {
+      console.log(data);
       self.setState({entries: data.entries});
-    });
-  }
-
-  getUsers() {
-    let self = this;
-    $.ajax({
-      url: '/users',
-      type: 'GET'
-    }).success( data => {
-      self.setState({user: data.user})
+      self.setState({user: data.user});
     });
   }
 
@@ -44,14 +37,13 @@ class Entries extends React.Component{
   addEntryForm() {
     if (this.state.showAdd){
       return(
-        <div className='entry z-depth-5 card '>
+        <div className='col l12 entry card '>
           <form onSubmit={this.submitEntry}>
             <div className='input-field'>
               <input autoFocus='true' placeholder='date' type='date' onChange={this.addEntryDate}/>
               <input placeholder='title' type='text' onChange={this.addEntryTitle}/>
               <input placeholder='story' type='text' onChange={this.addEntryStory}/>
               <input placeholder='partners' type='text' onChange={this.addEntryPartners}/>
-
               <button className='btn pad' type='submit'>Save</button>
               <hr />
             </div>
@@ -101,20 +93,31 @@ class Entries extends React.Component{
     });
   }
 
+  showEntryFormButton(){
+    // debugger
+    if (this.state.user == "coreyrugino@gmail.com"){
+      return(
+        <div>
+          <div className='center-align'>
+            <a className='btn black-text' onClick={this.showEntryForm}>Add Journal Entry</a>
+          </div>
+        </div>
+      )
+    }
+  }
+
   render(){
+    // debugger
     let entries = this.state.entries.map( entry => {
       let key = `entry-${entry.id}`;
       return(<Entry key ={key} url={entry.url} refreshList={this.refreshList} {...entry}/>)
     })
-
     return(
       <div>
         <br/>
         <h1 className='center entriesTitle'>Journal Entries</h1>
         <br/>
-        <div className='center-align'>
-          <a className='btn black-text' onClick={this.showEntryForm}>Add Journal Entry</a>
-        </div>
+        {this.showEntryFormButton()}
         {this.addEntryForm()}
         <br />
         <div className='row'>

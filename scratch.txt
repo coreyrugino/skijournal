@@ -95,3 +95,24 @@ owlCarousel put at bottom of page
     .owl-carousel#owl-demo
 materialbox image popup in show.html
   %img.framedTitle.materialboxed#showImg{:src => picture.image.url(:full), "data-caption" => picture.caption,  "height" => "250", }
+
+img and p tag shows the image and comment for the [0] slot image
+  <% if this.props.pictures.any? %>
+    <h1>Images</h1>
+    <img width='200px' src={this.props.pictures[0].image.url}/>
+    <p>{this.props.pictures[0].caption}</p>
+  <% else %>
+    <h1>No Images</h1>
+
+possible way to get user
+    getUsers() {
+      let self = this;
+      $.ajax({
+        url: '/user',
+        type: 'GET'
+      }).success( data => {
+        self.setState({user: data.user})
+      }).error( data => {
+        alert('no user present')
+      });
+    }

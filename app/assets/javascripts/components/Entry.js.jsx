@@ -6,8 +6,13 @@ class Entry extends React.Component{
   }
 
   componentDidMount(){
-    $(document).ready(function(){
-      $('.materialboxed').materialbox();
+    $(document).ready(function() {
+      $("#owl-demo").owlCarousel({
+        navigation : true, // Show next and prev buttons
+        slideSpeed : 300,
+        paginationSpeed : 400,
+        singleItem:true
+      });
     });
   }
 
@@ -33,19 +38,32 @@ class Entry extends React.Component{
 
   showInfo() {
     // debugger
-    console.log('modal showing in Entry.')
+    let pictures = this.props.pictures.map( picture => {
+      let key = `picture-${picture.id}`;
+      return(<Picture key={key} {...picture}/>)
+    })
     return(
       <div>
         <div>
           <div id={`openModal-${this.props.id}`} className="modalDialog">
           	<div>
-        		<a href="#close" title="Close" className="close">X</a>
-        		<h2 className='center smallCaps textOutline' id='fontsize' >{this.props.title}</h2>
-            <div className='row'>
-              <h2 className='col s6 m6 l6 center-align textOutline'>Date: {this.props.date}</h2>
-              <h2 className='col s6 m6 l6 center-align textOutline'>Partners: {this.props.partners}</h2>
-            </div>
-        		<p className='flow-text textOutline'>{this.props.story}</p>
+        		    <a href="#close" title="Close" className="close">X</a>
+        		    <h2 className='center smallCaps textOutline' id='fontsize' >{this.props.title}</h2>
+                <div className='row'>
+                  <h2 className='col s6 m6 l6 center-align textOutline'>Date: {this.props.date}</h2>
+                  <h2 className='col s6 m6 l6 center-align textOutline'>Partners: {this.props.partners}</h2>
+                </div>
+                <div className='row'>
+                  <div className='col l6'>
+          		      <p className='flow-text textOutline'>{this.props.story}</p>
+                  </div>
+                  <div className='col l6'>
+                  <br/>
+                    <div id="owl-demo" className="owl-carousel center-align">
+                      {pictures}
+                    </div>
+                  </div>
+                </div>
             </div>
         	</div>
         </div>
@@ -63,7 +81,7 @@ class Entry extends React.Component{
               <h5>{this.props.date}</h5>
               <h5 className='truncate'>{this.props.story}</h5>
               <p>{this.props.partners}</p>
-              <p>{this.props.images}</p>
+              <p>Pictures: {this.props.pictures.length}</p>
               <br/>
               <a href={Routes.entry_path(this.props.id)} className="button1">more</a>
               <a href={`#openModal-${this.props.id }`}  onClick={()=>this.showInfo(this.props.id)} className="button1">Modal</a>

@@ -3,11 +3,17 @@ class Picture extends React.Component{
     super(props);
   }
 
+  componentDidMount(){
+
+  }
+
   render(){
+    // debugger
     return(
       <div>
-        <img src={this.props.picture}/>
-        <p>{this.props.caption}</p>
+        <div>
+          <img height='500px' src={this.props.image.url}/>
+        </div>
       </div>
     )}
 }

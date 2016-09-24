@@ -10,6 +10,26 @@ class Instapics extends React.Component{
     $(document).ready(function(){
       $('.materialboxed').materialbox();
     });
+
+    $(document).ready(function() {
+    	$('.popup-gallery').magnificPopup({
+    		delegate: 'a',
+    		type: 'image',
+    		tLoading: 'Loading image #%curr%...',
+    		mainClass: 'mfp-img-mobile',
+    		gallery: {
+    			enabled: true,
+    			navigateByImgClick: true,
+    			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    		},
+    		image: {
+    			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+    			titleSrc: function(item) {
+    				return item.el.attr('title') + '<small>Corey Rugino Photograpghy</small>';
+    			}
+    		}
+    	});
+  	});
   }
 
   gitpics(){
@@ -38,7 +58,7 @@ class Instapics extends React.Component{
         <br/>
         <h1 className='instaTitle center'>InstaPics!</h1>
         <br/>
-        <div className='center cAlign'>
+        <div className='center cAlign popup-gallery'>
           {instapics}
         </div>
       </div>);

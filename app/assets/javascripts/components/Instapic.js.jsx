@@ -18,7 +18,6 @@ class Instapic extends React.Component{
               <img className=' materialboxed imageSizing'  width='360px'
                 src={this.props.images.standard_resolution.url} data-caption={this.props.caption.text}></img>
             </div>
-            
           </div>
         </div>
       </div>);
