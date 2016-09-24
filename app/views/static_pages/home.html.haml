@@ -4,12 +4,9 @@
   Cats_on_peaks
   .parallax
     %img{:src => "https://s3-us-west-2.amazonaws.com/entrypics/TimaAKS.jpg"}/
-    -# %img{:src => "https://s3-us-west-2.amazonaws.com/entrypics/taosCloudyValleyS.jpg"}/
-    -# %img{:src => "https://s3-us-west-2.amazonaws.com/entrypics/mineralAroundSm.jpg"}/
 .section#backGroundColor1
   .row.container
     %h2.header.center-align.outlineTitle Welcome to Cats_on_Peaks
-    -# -binding.pry
     - if user_signed_in? == true
       %h4.center-align #{current_user.email}
     - else
@@ -28,7 +25,6 @@
   Cats_on_peaks
   .parallax
     %img{:src => "https://s3-us-west-2.amazonaws.com/entrypics/mineralAroundSm.jpg"}/
-    -# %img{:src => "https://s3-us-west-2.amazonaws.com/entrypics/TimaAKS.jpg"}/
 .section.white
   .row.container
     %h2.header.center-align

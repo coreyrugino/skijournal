@@ -2,10 +2,6 @@ class EntriesController < ApplicationController
   before_action :authenticate_user!, :except => [:show, :index]
   def index
     @entries = Entry.all.order(:date).reverse_order
-    # @user = current_user.email
-    # @pictures = Picture.all
-    # @pictures = Picture.where(entry_id: @entry.id)
-    # binding.pry
   end
 
   def show
@@ -20,7 +16,6 @@ class EntriesController < ApplicationController
   def destroy
     @entry = Entry.find(params[:id]).destroy
     redirect_to dashboard_index_path
-
   end
 
   def edit

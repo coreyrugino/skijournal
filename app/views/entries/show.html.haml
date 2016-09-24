@@ -12,9 +12,9 @@
     .popup-gallery
       - if @pictures.any?
         -@pictures.each do |picture|
-          
-          %a.framedTitle#showImg{:href => picture.image.url(:full), :title => picture.caption}
-            %img{:src => picture.image.url(:full), :height => "250"}
+
+          %a.framedTitle#showImg{:href => picture.image.url, :title => picture.caption}
+            %img{:src => picture.image.url, :height => "250"}
 
   .row
   - if current_user != nil && current_user.email == 'coreyrugino@gmail.com'

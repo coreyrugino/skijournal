@@ -11,7 +11,6 @@ class Entries extends React.Component{
     this.refreshList = this.refreshList.bind(this);
     this.addEntryPics = this.addEntryPics.bind(this);
     this.showEntryFormButton = this.showEntryFormButton.bind(this);
-    // this.getUsers = this.getUsers.bind(this)
   }
 
   componentDidMount() {
@@ -107,7 +106,6 @@ class Entries extends React.Component{
   }
 
   render(){
-    // debugger
     let entries = this.state.entries.map( entry => {
       let key = `entry-${entry.id}`;
       return(<Entry key ={key} url={entry.url} refreshList={this.refreshList} {...entry}/>)
