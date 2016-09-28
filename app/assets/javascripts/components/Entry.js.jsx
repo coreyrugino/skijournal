@@ -1,8 +1,10 @@
 class Entry extends React.Component{
   constructor(props){
     super(props);
+    this.state = {pictures: []}
     this.deleteItem = this.deleteItem.bind(this);
     this.showInfo = this.showInfo.bind(this);
+    this.imageSelection = this.imageSelection.bind(this);
   }
 
   componentDidMount(){
@@ -37,19 +39,15 @@ class Entry extends React.Component{
 
   imageSelection(){
     // debugger
-    if (this.props.pictures.length == 0){
+    let self = this;
+    if (this.props.pictures == ""){
       return(
-        <div>
           <img className='card-image-radius' height='300px' src="https://s3-us-west-2.amazonaws.com/entrypics/deepDayDigging.jpg"/>
-        </div>
-      )
-    }
-    else {
+      );
+    } else {
       return(
-        <div>
           <img className='card-image-radius' height='300px' src={this.props.pictures[0].image.url}/>
-        </div>
-      )
+      );
     }
   }
 
@@ -89,6 +87,7 @@ class Entry extends React.Component{
   }
 
   render(){
+
     return(
       <div>
         <div className='col s6 m4'>
@@ -103,8 +102,7 @@ class Entry extends React.Component{
               <p>Pictures: {this.props.pictures.length}</p>
             </div>
             <div className='card-action'>
-              <a href={Routes.entry_path(this.props.id)} >Story</a>
-              <a href={`#openModal-${this.props.id }`}  onClick={()=>this.showInfo(this.props.id)} >Quick View</a>
+              <a href={Routes.entry_path(this.props.id)}>Story</a>
             </div>
           </div>
         </div>

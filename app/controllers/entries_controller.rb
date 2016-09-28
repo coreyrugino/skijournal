@@ -6,7 +6,6 @@ class EntriesController < ApplicationController
 
   def show
     @entry = Entry.find(params[:id])
-    @pictures = Picture.where(entry_id: @entry.id)
   end
 
   def create

@@ -12,12 +12,10 @@
   %h3.center Images
   .row
     .popup-gallery
-      - if @pictures.any?
-        -@pictures.each do |picture|
-
+      - if @entry.pictures.any?
+        -@entry.pictures.each do |picture|
           %a.framedTitle#showImg{:href => picture.image.url, :title => picture.caption}
             %img{:src => picture.image.url, :height => "250"}
-
   .row
   - if current_user != nil && current_user.email == 'coreyrugino@gmail.com'
     %a= link_to 'New image', new_picture_path(entry_id: @entry.id)
