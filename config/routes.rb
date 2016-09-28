@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :pictures
   get 'static_pages/home'
   get 'dashboard/index'
-  get 'user', to:'entries#user'
+  # get 'user', to:'entries#user'
   root 'static_pages#home'
   # root 'dashboard#index'
 end

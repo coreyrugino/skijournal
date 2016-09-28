@@ -14,10 +14,6 @@ body {
   // background-size: contain;
 }
 
-.card {
-  max-width: 410px;
-}
-
 .cAlign {
   margin-left: 20px;
 }
@@ -25,6 +21,7 @@ body {
 .imageSizing {
   border: 2px solid black;
   border-radius: 10px;
+  width: 100%;
 }
 
 #tryingToCenter {
@@ -37,8 +34,17 @@ body {
   font-size: 90px;
 }
 
+.stopOverflow{
+  // word-wrap: normal;
+  // overflow: hidden;
+}
+
 .textOutline {
   text-shadow: 0 0 4px white,0 0 4px white;
+}
+
+.blackTextOutline {
+  text-shadow: 0 0 4px black,0 0 4px black;
 }
 
 .entry {
@@ -133,7 +139,24 @@ body {
 
 .close:hover { background: #00d9ff; }
 
+//image fit in modal properly
+.fitImages {
+  // width: 100%;
+  // max-height: 50%;
+    height: auto;
+    width: auto;
+    max-width: 420px;
+    max-height: 400px;
+
+}
+
 // entries card styling
+
+.card-image-radius {
+  // border: 5px solid white;
+  border-radius: 25px;
+}
+
 .entriesTitle {
   color: #2c2c2c;
   // width: 50%;
@@ -150,13 +173,18 @@ body {
 .clearCard {
   // margin: 30px;
   // background-color: rgba(124, 219, 213, .7);
-  background-color: rgba(51, 204, 51, .7);
+  background-color: rgba(102, 102, 102, .5);
   // border: 1px solid black;
   // opacity: 0.6;
   // filter: alpha(opacity=60);
-  border-radius: 25px 50px;
-  border: 5px solid rgba(102, 102, 102, .7);
+  border-radius: 0px 0px 25px 25px;
+  border: 5px solid rgba(51, 204, 51, .7);
   // color: yellow;
+  max-width: 100%;
+}
+
+.card-action {
+  border-radius: 0px 0px 25px 25px;
 }
 
 .clearCard:hover {
@@ -173,13 +201,14 @@ body {
 }
 
 .button1 {
-    z-index: 25;
+    // z-index: 25;
     background-color: #F53240;
     color: black;
     border-radius: 8px;
     border: 3px solid #F9BE02;
-    padding: 3px 10px;
-    margin: 20px;
+    width: 100px;
+    // padding: 3px 10px;
+    margin: 10px;
     color: #F9BE02;
 }
 

@@ -29,11 +29,28 @@ class Entry extends React.Component{
   showButtons(){
     return(
       <div>
-
         <a href={Routes.edit_entry_path(this.props.id)}>edit</a>
         <a href='#' className='black' onClick={()=>this.deleteItem()} >X</a>
       </div>
     )
+  }
+
+  imageSelection(){
+    // debugger
+    if (this.props.pictures.length == 0){
+      return(
+        <div>
+          <img className='card-image-radius' height='300px' src="https://s3-us-west-2.amazonaws.com/entrypics/deepDayDigging.jpg"/>
+        </div>
+      )
+    }
+    else {
+      return(
+        <div>
+          <img className='card-image-radius' height='300px' src={this.props.pictures[0].image.url}/>
+        </div>
+      )
+    }
   }
 
   showInfo() {
@@ -74,18 +91,20 @@ class Entry extends React.Component{
   render(){
     return(
       <div>
-        <div className='col s12 m4'>
+        <div className='col s6 m4'>
           <div className='z-depth-5 card hoverable clearCard' id='journalCards'>
-            <div className='card-content darkenText black-text'>
-              <span className='card-title flow-text smallCaps truncate'>{this.props.title}</span>
+            <div className="card-image ">
+              {this.imageSelection()}
+              <span className='card-title stopOverflow smallCaps blackTextOutline'>{this.props.title}</span>
+            </div>
+            <div className='card-content darkenText white-text'>
               <h5>{this.props.date}</h5>
-              <h5 className='truncate'>{this.props.story}</h5>
-              <p>{this.props.partners}</p>
+              <p>Partners: {this.props.partners}</p>
               <p>Pictures: {this.props.pictures.length}</p>
-              <br/>
-              <a href={Routes.entry_path(this.props.id)} className="button1">more</a>
-              <a href={`#openModal-${this.props.id }`}  onClick={()=>this.showInfo(this.props.id)} className="button1">Modal</a>
-              <br/>
+            </div>
+            <div className='card-action'>
+              <a href={Routes.entry_path(this.props.id)} >Story</a>
+              <a href={`#openModal-${this.props.id }`}  onClick={()=>this.showInfo(this.props.id)} >Quick View</a>
             </div>
           </div>
         </div>

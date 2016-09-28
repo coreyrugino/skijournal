@@ -115,6 +115,7 @@ class Entries extends React.Component{
         <br/>
         <h1 className='center entriesTitle'>Journal Entries</h1>
         <br/>
+        
         {this.showEntryFormButton()}
         {this.addEntryForm()}
         <br />

@@ -116,3 +116,17 @@ possible way to get user
         alert('no user present')
       });
     }
+
+  code came from entry
+    <div className='card-content darkenText black-text'>
+    <span className=' flow-text smallCaps truncate'>{this.props.title}</span>
+    <h5>{this.props.date}</h5>
+    <h5 className='truncate'>{this.props.story}</h5>
+    <p>{this.props.partners}</p>
+    <p>Pictures: {this.props.pictures.length}</p>
+    <br/>
+    <a href={Routes.entry_path(this.props.id)} className="button1">more</a>
+    <a href={`#openModal-${this.props.id }`}  onClick={()=>this.showInfo(this.props.id)} className="button1">Modal</a>
+    <br/>
+
+have to add an if there is no pics, then use this pic instead in the entry.js

@@ -1,5 +1,6 @@
 json.entries @entries do |entry|
-  json.(entry, :id, :date, :title, :story, :partners, :pictures)
+  json.(entry, :id, :title, :story, :partners, :pictures)
+  json.date entry.date.strftime("%A, %B %e, %Y")
   json.url entry_url(entry)
 end
 
