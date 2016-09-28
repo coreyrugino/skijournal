@@ -40,6 +40,7 @@ gem 'annotate'
 gem 'rails_12factor'
 gem 'devise', '~> 3.4.0'
 gem 'react-rails-img'
+gem 'puma'
 gem 'react-rails'
 
 
