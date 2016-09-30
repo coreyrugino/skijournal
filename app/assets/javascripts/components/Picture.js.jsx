@@ -12,7 +12,9 @@ class Picture extends React.Component{
     return(
       <div>
         <div>
-          <img className='fitImages' src={this.props.image.url}/>
+
+            <img className='fitImages' src={this.props.image.url}/>
+          
         </div>
       </div>
     )}

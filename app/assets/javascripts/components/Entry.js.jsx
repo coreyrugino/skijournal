@@ -9,7 +9,7 @@ class Entry extends React.Component{
 
   componentDidMount(){
     $(document).ready(function() {
-      $("#owl-demo").owlCarousel({
+      $(".owl-demo").owlCarousel({
         navigation : true, // Show next and prev buttons
         slideSpeed : 300,
         paginationSpeed : 400,
@@ -42,11 +42,11 @@ class Entry extends React.Component{
     let self = this;
     if (this.props.pictures == ""){
       return(
-          <img className='card-image-radius' height='300px' src="https://s3-us-west-2.amazonaws.com/entrypics/deepDayDigging.jpg"/>
+          <img className='card-image' height='300px'  src="https://s3-us-west-2.amazonaws.com/entrypics/deepDayDigging.jpg"/>
       );
     } else {
       return(
-          <img className='card-image-radius' height='300px' src={this.props.pictures[0].image.url}/>
+          <img className='card-image' height='300px' src={this.props.pictures[0].image.url}/>
       );
     }
   }
@@ -74,7 +74,7 @@ class Entry extends React.Component{
                   </div>
                   <div className='col l6'>
                   <br/>
-                    <div id="owl-demo" className="owl-carousel center-align">
+                    <div className="owl-demo owl-carousel center-align">
                       {pictures}
                     </div>
                   </div>
@@ -87,7 +87,6 @@ class Entry extends React.Component{
   }
 
   render(){
-
     return(
       <div>
         <div className='col s6 m4'>
@@ -103,10 +102,12 @@ class Entry extends React.Component{
             </div>
             <div className='card-action'>
               <a href={Routes.entry_path(this.props.id)}>Story</a>
+              <a href={`#openModal-${this.props.id }`}  onClick={()=>this.showInfo(this.props.id)} >Quick View</a>
             </div>
           </div>
         </div>
         {this.showInfo()}
+
       </div>);
   }
 }
