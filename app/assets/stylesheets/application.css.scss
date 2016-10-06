@@ -16,10 +16,16 @@
  *= require magnific-popup
  */
 
+ @font-face {
+   font-family: "cloudy";
+   src: url(/assets/cloudy/AlphaClouds.ttf) format("truetype");
+ }
+
  // navbar title text
 #nav-stroke {
+  font-family: "cloudy";
    font-size: 60px;
-   -webkit-text-stroke: 1px black;
+   -webkit-text-stroke: 1px white;
    color: white;
    text-shadow:
      3px 3px 0 #000,
@@ -29,7 +35,6 @@
      1px -1px 0 #000,
     -1px  1px 0 #000,
      1px  1px 0 #000;
-     text-rendering: optimizeLegibility;
 }
 
 .backgroundColor {
@@ -41,10 +46,6 @@
   // min-height: calc(100vh - 120px);
 }
 
-.parent {
-  // overflow:hidden;
-}
-
 .whiteText {
   color: white;
 }
@@ -53,23 +54,25 @@
   text-indent: 30px;
 }
 
-.outline {
-  -webkit-text-stroke: 1px black;
-  font-size: 28px;
+li{
+  size: 30px;
 }
 
-// a:link {
-//   -webkit-text-stroke: 1px black !important;
-//   font-size: 25px;
-// }
+.outline {
+  font-family: "cloudy";
+  -webkit-text-stroke: 1px white;
+  text-shadow:
+    3px 3px 0 #000;
+  font-size: 28px;
+}
 
 footer {
   background: url(https://s3-us-west-2.amazonaws.com/entrypics/brightonLakeTreesFooter.jpg);
 	background-color: rgba(0,0,0,1);
 	width:100%;
 	height:auto;
-  border-top: 3px solid black;
-  border-radius: 10px 10px 0px 0px;
+  border-top: 1px solid black;
+  // border-radius: 10px 10px 0px 0px;
 }
 
 @import "materialize";

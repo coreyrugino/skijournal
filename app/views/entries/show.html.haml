@@ -1,4 +1,4 @@
-.container.content
+.container
   %br
   %a.back{:href => '../dashboard/index'} Back
   .row.center
@@ -8,14 +8,15 @@
     -# %h4.col.l6.center Date: #{@entry.date}
     %h4.col.l6.center #{date}
     %h4.col.l6.center Partners: #{@entry.partners}
-  %p.tab.flow-text #{@entry.story}
+  %p#tab.flow-text #{@entry.story}
   %h3.center Images
   .row
     .popup-gallery
       - if @entry.pictures.any?
-        -@entry.pictures.each do |picture|
-          %a.framedTitle#showImg{:href => picture.image.url, :title => picture.caption}
-            %img{:src => picture.image.url, :height => "250"}
+        .owl-demo
+          -@entry.pictures.each do |picture|
+            %a.framedTitle{:href => picture.image.url, :title => picture.caption}
+              %img.item{:src => picture.image.url, :width => "100%", :height => "250"}
   .row
   - if current_user != nil && current_user.email == 'coreyrugino@gmail.com'
     %a= link_to 'New image', new_picture_path(entry_id: @entry.id)
@@ -42,4 +43,13 @@
   			}
   		}
   	});
+    $(".owl-demo").owlCarousel({
+      margin:100,
+      loop:true,
+      autoWidth:true,
+      items:4,
+      navigation:true,
+      paginationNumbers: true,
+
+    });
   });

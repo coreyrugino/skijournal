@@ -42,7 +42,7 @@ class Entry extends React.Component{
     let self = this;
     if (this.props.pictures == ""){
       return(
-          <img className='card-image' height='300px'  src="https://s3-us-west-2.amazonaws.com/entrypics/deepDayDigging.jpg"/>
+          <img className='card-image' height='300px' src="https://s3-us-west-2.amazonaws.com/entrypics/deepDayDigging.jpg"/>
       );
     } else {
       return(
@@ -62,23 +62,18 @@ class Entry extends React.Component{
         <div>
           <div id={`openModal-${this.props.id}`} className="modalDialog">
           	<div>
-        		    <a href="#close" title="Close" className="close">X</a>
-        		    <h2 className='center smallCaps textOutline' id='fontsize' >{this.props.title}</h2>
-                <div className='row'>
-                  <h2 className='col s6 m6 l6 center-align textOutline'>Date: {this.props.date}</h2>
-                  <h2 className='col s6 m6 l6 center-align textOutline'>Partners: {this.props.partners}</h2>
+      		    <a href="#close" title="Close" className="close">X</a>
+      		    <h2 className='center smallCaps textOutline' id='fontsize' >{this.props.title}</h2>
+              <div className='row'>
+                <h2 className='col s6 m6 l6 center-align textOutline'>Date: {this.props.date}</h2>
+                <h2 className='col s6 m6 l6 center-align textOutline'>Partners: {this.props.partners}</h2>
+              </div>
+              <div>
+                <div className="owl-demo owl-carousel center-align huh">
+                  {pictures}
                 </div>
-                <div className='row'>
-                  <div className='col l6'>
-          		      <p className='flow-text textOutline'>{this.props.story}</p>
-                  </div>
-                  <div className='col l6'>
-                  <br/>
-                    <div className="owl-demo owl-carousel center-align">
-                      {pictures}
-                    </div>
-                  </div>
-                </div>
+                <p className='flow-text textOutline'>{this.props.story}</p>
+              </div>
             </div>
         	</div>
         </div>
@@ -107,7 +102,6 @@ class Entry extends React.Component{
           </div>
         </div>
         {this.showInfo()}
-
       </div>);
   }
 }

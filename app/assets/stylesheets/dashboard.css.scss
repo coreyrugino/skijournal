@@ -64,7 +64,8 @@ body {
 }
 
 .smallCaps {
-  font-variant: small-caps;
+  // font-variant: small-caps;
+  text-transform: capitalize;
 }
 
 // For the modal dialog showing my entry info
@@ -108,16 +109,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  // margin: 5% 5%;
-  // margin: 5% 5% auto;
-  // padding: 5px 20px 13px 20px;
-  // opacity: 0.9;
-  // background: rgba(0,0,0,0.1);
-  // background-size: contain;
-  // background: #fff;
-	// background: -moz-linear-gradient(#fff, #999);
-	// background: -webkit-linear-gradient(#fff, #999);
-	// background: -o-linear-gradient(#fff, #999);
   overflow: auto;
 }
 
@@ -154,9 +145,15 @@ body {
   // max-height: 50%;
     height: auto;
     width: auto;
-    max-width: 420px;
+    max-width: 620px;
     max-height: 400px;
 
+}
+
+.huh {
+  float:right;
+  max-width: 620px;
+  // width:auto;
 }
 
 // entries card styling
@@ -196,38 +193,13 @@ body {
   height: 100%;
 }
 
-.card-action {
-  border-radius: 0px 0px 25px 25px;
-}
-
 .clearCard:hover {
   background-color: rgba(0, 177, 2, .9);
   border: 5px solid rgba(102, 102, 102, .9);
-  .button1 {
-      background-color: #7CDBD5;
-      color: black;
-  }
-  .button1:hover {
-      background-color: black ;
-      color: #7CDBD5;
-  }
-}
-
-.button1 {
-    // z-index: 25;
-    background-color: #F53240;
-    color: black;
-    border-radius: 8px;
-    border: 3px solid #F9BE02;
-    width: 100px;
-    // padding: 3px 10px;
-    margin: 10px;
-    color: #F9BE02;
 }
 
 // css for instaSide
 .instaCards {
-  // background-color: #F53240;
   background-color: rgba(102, 102, 102, .7);
   border: 5px solid rgba(51, 204, 51, .7);
   border-radius: 20px;
@@ -237,10 +209,8 @@ body {
 
 .instaTitle {
   color: #2c2c2c;
-  // width: 50%;
   font-size: 40px;
   transform:scale(2,1.5);
-  //  background-color: #d5d5d5;
   letter-spacing: .05em;
   text-shadow:
   2px 2px 1px #d5d5d5,

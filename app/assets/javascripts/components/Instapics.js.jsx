@@ -35,7 +35,7 @@ class Instapics extends React.Component{
   gitpics(){
     let self = this;
     $.ajax({
-      url: "https://api.instagram.com/v1/users/self/media/recent/?access_token=13409763.a17fd3f.f05f1dbe234746b68df24c3664b9aef1&callback=callbackFunction",
+      url: "https://api.instagram.com/v1/users/self/media/recent?count=10&access_token=13409763.a17fd3f.f05f1dbe234746b68df24c3664b9aef1&callback=callbackFunction",
       dataType: 'jsonp',
       type: 'GET',
       // jsonp: 'callback',
