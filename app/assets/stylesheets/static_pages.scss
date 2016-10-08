@@ -1,17 +1,8 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
-  // background-color: ;
-}
-.scale {
-  width: 100%;
-}
 
-.parallax-container {
-
-}
-
+// home page css
 .outlineTitle {
   -webkit-text-stroke: 1px white;
   font-size: 68px;
@@ -23,10 +14,7 @@ body {
 }
 
 #backGroundColor1 {
-  // background-color: #FF5714;
   background-color: rgba(255, 26, 26, 1);
-  // border-top: 4px solid black;
-  // border-bottom: 4px solid rgba(255, 77, 77, 1);
 }
 
 #backGroundColor2 {
@@ -36,8 +24,12 @@ body {
 #backGroundColor3 {
   background-color: #6EEB83;
 }
-.expand{
-  // height: 20px;
-  // padding-bottom: 20px;
-  // border-bottom: -30px;
+
+// resume page css
+
+#triangle-topright {
+	width: 0;
+	height: 0;
+	border-top: 100px solid red;
+  border-left: 100px solid transparent;
 }

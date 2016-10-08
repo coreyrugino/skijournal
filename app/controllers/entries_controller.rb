@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
-  before_action :authenticate_user!, :except => [:show, :index]
+  before_action :authenticate_user!, :except => [:show, :index, :search]
   def index
     @entries = Entry.all.order(:date).reverse_order
   end
@@ -28,6 +28,12 @@ class EntriesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def search
+    search_term = params[:search_term]
+    @entries = Entry.where('lower(partners) LIKE ?', "%#{search_term.downcase}%").order(:date).reverse_order
+    render 'index'
   end
 
   private

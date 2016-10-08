@@ -6,7 +6,7 @@
     %img{:src => "https://s3-us-west-2.amazonaws.com/entrypics/TimaAKS.jpg"}/
 .section#backGroundColor1
   .row.container
-    %h2.header.center-align.outlineTitle Welcome to Cats_on_Peaks
+    %h2.center-align.outlineTitle Welcome to Cats_on_Peaks
     - if user_signed_in? == true
       %h4.center-align #{current_user.email}
     - else
@@ -15,10 +15,10 @@
 .parallax-container
   .white-text Cats_on_peaks
   .parallax
-    %img.scale{:src => "https://s3-us-west-2.amazonaws.com/entrypics/sunflowerCloseSD.jpg"}/
+    %img{:src => "https://s3-us-west-2.amazonaws.com/entrypics/sunflowerCloseSD.jpg"}/
 .section#backGroundColor2
   .row.container
-    %h2.header.center-align
+    %h2.center-align
       %a.outlineTitle{:href => 'http://mysongis.herokuapp.com/users/sign_in', :target => "_blank"} MySongIs
     %h5.center-align A social website based around music that defines you. Still waiting for it to be deployed.
 .parallax-container
@@ -27,6 +27,6 @@
     %img{:src => "https://s3-us-west-2.amazonaws.com/entrypics/mineralAroundSm.jpg"}/
 .section.white
   .row.container
-    %h2.header.center-align
+    %h2.center-align
       %a.blackOutline{:href => 'dashboard/index'} Adventure
     %h5.center-align#tab This will bring you to a link of my splitboard/adventure journal from what i can rememebr, along with help from my friends as well.

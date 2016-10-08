@@ -15,6 +15,15 @@ class Entry extends React.Component{
         paginationSpeed : 400,
         singleItem:true
       });
+      var modal = document.getElementById("`openModal-${this.props.id}`");
+      var modalDialog = document.getElementByClassName("modalDialog")[0];
+
+      window.onclick = function(event) {
+
+        if (event.target != modal) {
+          modalDialog.style.opacity = "0";
+        }
+      }
     });
   }
 
@@ -62,7 +71,7 @@ class Entry extends React.Component{
         <div>
           <div id={`openModal-${this.props.id}`} className="modalDialog">
           	<div>
-      		    <a href="#close" title="Close" className="close">X</a>
+      		    <a href="#close" title="Close" className="close"><span aria-hidden="true"></span>X</a>
       		    <h2 className='center smallCaps textOutline' id='fontsize' >{this.props.title}</h2>
               <div className='row'>
                 <h2 className='col s6 m6 l6 center-align textOutline'>Date: {this.props.date}</h2>
@@ -73,6 +82,9 @@ class Entry extends React.Component{
                   {pictures}
                 </div>
                 <p className='flow-text textOutline'>{this.props.story}</p>
+              </div>
+              <div className='row'>
+                <a href="#close" title="Close2" className="close2">X</a>
               </div>
             </div>
         	</div>
@@ -95,9 +107,9 @@ class Entry extends React.Component{
               <p>Partners: {this.props.partners}</p>
               <p>Pictures: {this.props.pictures.length}</p>
             </div>
-            <div className='card-action'>
-              <a href={Routes.entry_path(this.props.id)}>Story</a>
-              <a href={`#openModal-${this.props.id }`}  onClick={()=>this.showInfo(this.props.id)} >Quick View</a>
+            <div className='card-action bottom-curves'>
+              <a className='white-text' href={Routes.entry_path(this.props.id)}>Story</a>
+              <a className='white-text' href={`#openModal-${this.props.id }`}  onClick={()=>this.showInfo(this.props.id)} >Quick View</a>
             </div>
           </div>
         </div>

@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   resources :entries
   resources :pictures
   get 'static_pages/home'
+  get 'static_pages/resume'
   get 'dashboard/index'
-  # get 'user', to:'entries#user'
+  get 'entry_search', to:'entries#search'
   root 'static_pages#home'
-  # root 'dashboard#index'
 end

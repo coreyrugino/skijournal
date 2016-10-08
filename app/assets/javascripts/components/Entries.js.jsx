@@ -11,6 +11,8 @@ class Entries extends React.Component{
     this.refreshList = this.refreshList.bind(this);
     this.addEntryPics = this.addEntryPics.bind(this);
     this.showEntryFormButton = this.showEntryFormButton.bind(this);
+    this.showVideoSection = this.showVideoSection.bind(this);
+    this.search = this.search.bind(this);
   }
 
   componentDidMount() {
@@ -105,6 +107,54 @@ class Entries extends React.Component{
     }
   }
 
+  showVideoSection() {
+    this.setState({ showVids: !this.state.showVids});
+  }
+
+  search() {
+    $.ajax({
+      url: '/entry_search',
+      type: 'GET',
+      data: {search_term : this.refs.search.value}
+    }).success (data =>{
+      this.setState({entries: data.entries})
+    });
+
+  }
+
+  addShowVideos() {
+    if (this.state.showVids){
+      return(
+        <div id='background-video'>
+          <h1 className='center-align'>Hello!</h1>
+          <h3>"2013 Under Review" mostly gopro of some pow!</h3>
+          <div className='video-container'>
+            <iframe src="https://player.vimeo.com/video/84810398" width="640" height="360" frameBorder="0" allowFullScreen></iframe>
+            <p><a href="https://vimeo.com/84810398">2013 Under Review</a> from <a href="https://vimeo.com/couloircorey">Corey Rugino</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+          </div>
+          <br/>
+          <h3>A short video "Gettin to the Goods" made by Walcott</h3>
+          <div className='video-container'>
+            <iframe src="https://player.vimeo.com/video/59214616" width="640" height="360" frameBorder="0" allowFullScreen></iframe>
+            <p><a href="https://vimeo.com/59214616">Gettin&#039; to the Goods</a> from <a href="https://vimeo.com/user605148">Kyle Walcott</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+          </div>
+          <br/>
+          <h3>A short video "Janurary Pow" made by Walcott</h3>
+          <div className='video-container'>
+            <iframe src="https://player.vimeo.com/video/58239225" width="640" height="360" frameBorder="0" allowFullScreen></iframe>
+            <p><a href="https://vimeo.com/58239225">January Pow</a> from <a href="https://vimeo.com/user605148">Kyle Walcott</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+          </div>
+          <br/>
+          <h3>A full length feature "Heart of Pow" by Walcott</h3>
+          <div className='video-container'>
+            <iframe src="https://player.vimeo.com/video/26605995" width="640" height="360" frameBorder="0" allowFullScreen></iframe>
+            <p><a href="https://vimeo.com/26605995">Heart of Pow</a> from <a href="https://vimeo.com/user605148">Kyle Walcott</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+          </div>
+        </div>
+      )
+    }
+  }
+
   render(){
     let entries = this.state.entries.map( entry => {
       let key = `entry-${entry.id}`;
@@ -115,9 +165,13 @@ class Entries extends React.Component{
         <br/>
         <h1 className='center entriesTitle'>Journal Entries</h1>
         <br/>
-        
+        <div className='row'>
+          <a className='col l2 waves-effect waves-light btn-large blue lighten-2 white-text same-line-left' onClick={this.showVideoSection}>Videos</a>
+          <input className='col l8 offset-l1 same-line-right' placeholder='Search' ref='search' onChange={this.search} />
+        </div>
         {this.showEntryFormButton()}
         {this.addEntryForm()}
+        {this.addShowVideos()}
         <br />
         <div className='row'>
           {entries}
