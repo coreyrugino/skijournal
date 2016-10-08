@@ -15,15 +15,6 @@ class Entry extends React.Component{
         paginationSpeed : 400,
         singleItem:true
       });
-      var modal = document.getElementById("`openModal-${this.props.id}`");
-      var modalDialog = document.getElementByClassName("modalDialog")[0];
-
-      window.onclick = function(event) {
-
-        if (event.target != modal) {
-          modalDialog.style.opacity = "0";
-        }
-      }
     });
   }
 
