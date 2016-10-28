@@ -2,5 +2,6 @@ Ski Journal Read Me
 
 This site can log my adventures and show my newest instagram pictures all threw react.
 I have the show page for each story coming up as its own page so it is not a complete
-one page app, but i plan on having it as soon as i can. I also want to show pictures, and i
-plan on doing that here soon.
+one page app, but now  have the modal woring properly and now there is a choice
+to see it as a 1 page app or as its own show page to the the pics with greater detail.
+I am using AWS for picture storage and devise for log in credentials.

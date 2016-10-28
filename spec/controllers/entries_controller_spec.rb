@@ -7,19 +7,13 @@ RSpec.describe EntriesController, type: :controller do
     it "shows all entries successfully" do
       entry = FactoryGirl.create(:entry)
       expect(Entry.count).to eq(1)
-      # binding.pry   it has a user id of 1, and it works in our app.
-      # delete :destroy, id: mixtape.id
-      # expect(Mixtape.count).to eq(0)
+      binding.pry   #it has a user id of 1, and it works in our app.
     end
-    # it "has a 200 status code" do
-    #   get :index
-    #   expect(response.status).to eq(200)
-    #
-    # end
   end
 
   describe "GET #show" do
-    it "shows a single entry successfully"
+    it "shows a single entry successfully" do
+    end
   end
 
 end
