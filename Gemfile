@@ -66,6 +66,9 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'simplecov'
   gem 'factory_girl_rails'
+  gem 'warden-rspec-rails'
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
 
 group :development do

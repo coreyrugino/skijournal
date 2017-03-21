@@ -21,6 +21,10 @@ SimpleCov.start
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  # config.include Warden::Test::ControllerHelpers, type: :controller
+  #   def sign_in(user)
+  #     warden.set_user(user)
+  #   end
 
   # config.include Devise::TestHelpers, type: :controller
 # config.include Devise::Test::ControllerHelpers, type: :view
